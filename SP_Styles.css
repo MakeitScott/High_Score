@@ -1,0 +1,71 @@
+/*
+***		Written By: Scott Pietras
+*	SP_Styles.css - Senior Project Style sheet
+*	
+*		
+*	
+*	
+*	
+*	
+*	
+*	
+***		
+*/
+
+
+
+/*
+***		Backlog
+*	
+*	
+*	
+*	
+*	
+*	
+*	
+*	
+*	
+***		
+*/
+
+
+	body{
+		color: pink;
+		background-color:#68347F;
+		}
+	h6{
+			color:black;
+		}
+		
+
+
+	a{
+			font-size: 1.5em;
+		}
+		
+		
+	a:link {
+		  color: white;
+		  background-color: transparent;
+		  text-decoration: underline;
+		}
+	a:visited {
+		  color: black;
+		  background-color: transparent;
+		  text-decoration: none;
+		}
+	a:hover {
+		  color: #00FF00;
+		  background-color: transparent;
+		  text-decoration: underline;
+		}	
+
+	a:active {
+		  color: yellow;
+		  background-color: transparent;
+		  text-decoration: underline;
+		}
+
+
+
+

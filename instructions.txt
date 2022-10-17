@@ -1,0 +1,65 @@
+//instructions for final website
+
+
+    *
+    **
+    ***
+********
+********* check your volume  theres music on the home page 
+********
+    ***
+    **
+    *
+	
+	
+	
+	to log in with student privlages			 user id				tweety
+									password				bird
+												
+												
+log in brings you to home page
+
+you can check the roster
+student roster shows name role email and photo
+
+profile allows you to change your email address or password 
+and upload a profile picture
+
+
+your_grades  alows you to view grades
+
+
+assignmments  shows assignments and due date 
+
+
+
+
+	to log in with admin privlages			 user id				efudd
+									password				elmerfudd
+											
+
+
+
+
+
+admin roster view shows name role email and photo username and password for everyone 
+and button to update
+
+
+your_grades  admin doesnt have grades  you get a popup
+
+assignmments  shows assignments and due date   
+admin is alowed to crerate new assignments    with date input
+
+
+
+//admin only 
+
+ assign grades 
+
+
+class grades  shows eveyones grades  sort by student dropdown
+
+
+roster update 
+to add or modify users 

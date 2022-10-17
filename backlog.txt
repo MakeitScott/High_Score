@@ -1,0 +1,87 @@
+
+
+
+	/*
+	****** back log ******
+	*
+	* 
+	*
+	* 
+	* 
+	* 
+	*
+	*
+	*
+	*/
+
+
+
+// 9/21/22
+
+
+back logs created  on seperate file pages 
+create new database
+update home page
+
+
+
+
+
+
+-- organize into folders
+	one for the pages 
+	one for the extra included files Header 
+	Games
+	put back log and instructions in the 
+
+--pages we need
+home page
+profile  (display your scores)
+log in (then shows you are online)
+leader board (show top 100)
+
+
+--included files needed
+log in
+logoff
+session 
+mySQL connect
+check login 
+check roles
+
+
+
+// old stuff 
+-
+--
+---
+----
+---
+--
+-
+
+upload picture on admin roster does not work but works on user profile
+
+//done
+add assignment grades to students
+
+
+
+
+show grades to students  in student  assignment page with session ID
+(cant show  grades to other students)
+
+
+
+can sort by student but cant sort by both
+
+sort grades by student  for admin page
+sort by assignment on admin page
+
+
+
+
+
+add new assignments
+use date input type
+
