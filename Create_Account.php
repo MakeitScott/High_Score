@@ -1,5 +1,4 @@
 <?php
-// 
 /*
 ***		Written By: Scott Pietras
 *	Create_Account.php - create an account Page
@@ -15,14 +14,13 @@
 */
 
 
-
 /*
 ***		Backlog ::todo
 *	
 *	
+*	creat an account then send you to the log in page
 *	
-*	
-*	
+*	have alert / confirm message before sending you
 *	
 *	
 *	
@@ -104,145 +102,201 @@
 		if ($role == NULL) $msg .= 'role is missing<br>';
 		else if (!in_array($role, $ctgys)) $msg .= 'Invalid role<br>';
 		}
-		
-		
+
+
+/* 
+*
+make into a function?
+add this so the email addres is also unique
+*
+*/
+
  // varify the userid is unique
 			$query = "SELECT userid
 					  FROM $table 
 					  WHERE userid = '$userid'";
 			$result = mysqli_query($mysqli, $query);
 			if (!$result) echo "Query Error [$query] " . mysqli_error($mysqli);
-			
+
 // If USERID is FOUND,  then dont allow to continue	and clear user and password form		
 	if (mysqli_num_rows($result) > 0) {
 		$msg = "User ID $userid is taken already";
 			$userid =$password = null;
 	}
- 
-		
-		
-		
+
+
+
+
 // Change or Delete - Validate Last ROWID	
 		if (($task == 'Change') OR ($task == 'Delete')) {
 			if ($rowid != $last_rowid) $msg = 'Show record before changing or deleting<br>';
-			}
+		}
 //end varification
 	if ($msg != NULL) $task = 'Error';
 	
 // Process Input
 	switch($task) {
-    case 'First':	$msg = 'Enter your information and click Add';  break;
+			case 'First':	$msg = 'Enter your information and click Add';  break;
 
-    case 'Error':	$msg_color = 'red';  break;
-	
-	case 'Clear':
-		$last_rowid = $rowid = $fname = $lname = $role = $email = $userid = $password = NULL;
-		$msg = 'Form Cleared'; 
-		break;
-		
-	case 'Previous':
-	case 'Next':
-	case 'Show':
-		if ($task == 'Previous') $rowid--;
-		if ($task == 'Next') 	 $rowid++;
-		$query = "SELECT firstname, lastname, role, email, userid, password
-				  FROM $table
-				  WHERE rowid='$rowid'";
-		$result = mysqli_query($mysqli, $query);
-		if (!$result) echo "Query failed [$query] – " . mysqli_error($mysqli); 
-		if (mysqli_num_rows($result) < 1) {
-			$msg = "ROWID $rowid not found."; 
-			$msg_color='red'; 
-			$fname = $lname = $role = $email = $userid = $password = NULL;
-			}
-		else {
-			list($fname, $lname, $role, $email, $userid, $password) = mysqli_fetch_row($result); 
-			$msg = "Row $rowid found";
-			$last_rowid = $rowid;
-			} 
-		break;
+			case 'Error':	$msg_color = 'red';  break;
+			
+			case 'Clear':
+				$last_rowid = $rowid = $fname = $lname = $role = $email = $userid = $password = NULL;
+				$msg = 'Form Cleared'; 
+				break;
+				
+			case 'Previous':
+			case 'Next':
+			case 'Show':
+				if ($task == 'Previous') $rowid--;
+				if ($task == 'Next') 	 $rowid++;
+				$query = "SELECT firstname, lastname, role, email, userid, password
+						  FROM $table
+						  WHERE rowid='$rowid'";
+				$result = mysqli_query($mysqli, $query);
+				if (!$result) echo "Query failed [$query] – " . mysqli_error($mysqli); 
+				if (mysqli_num_rows($result) < 1) {
+					$msg = "ROWID $rowid not found."; 
+					$msg_color='red'; 
+					$fname = $lname = $role = $email = $userid = $password = NULL;
+					}
+				else {
+					list($fname, $lname, $role, $email, $userid, $password) = mysqli_fetch_row($result); 
+					$msg = "Row $rowid found";
+					$last_rowid = $rowid;
+					} 
+				break;
 
 
-//add
-	case 'Add':
-		$query = "INSERT INTO $table SET
-				  firstname			= '$fname',
-				  lastname			= '$lname',
-				  role				= '$role',
-				  email				= '$email',
-				  userid			= '$userid',
-				  password			= '$password'";
-				  
-//				  ,
-//				  photo				= '$photo'
-				  
-		$result = mysqli_query($mysqli, $query);
-		if (!$result) {
-			$msg = "Query failed [$query]" . mysqli_error($mysqli); 
-			$msg_color='red';
-		}
-		else {
-			$rowid = mysqli_insert_id($mysqli);
-//			$msg = "ROWID $rowid added";
-			$msg = "$fname you have created an account there are $rowid Users total";
-			$last_rowid = $rowid;
-		}
-			
-
-			
-			
-			
-	// after you add an account clear the form
-	$last_rowid = $rowid = $fname = $lname = $role = $email = $userid = $password = NULL;
-		break;
- //change 
-	case 'Change':
-
-		/* //	if($password == $confirmpassword){
-			
-				$query = "UPDATE $table SET
+		//add
+			case 'Add':
+				$query = "INSERT INTO $table SET
 						  firstname			= '$fname',
 						  lastname			= '$lname',
 						  role				= '$role',
 						  email				= '$email',
 						  userid			= '$userid',
-						  password			= '$password'
-						  WHERE rowid		= '$rowid'";
+						  password			= '$password'";
 						  
 		//				  ,
 		//				  photo				= '$photo'
-
+						  
 				$result = mysqli_query($mysqli, $query);
 				if (!$result) {
-					$msg = "QUERY failed [$query]: " . mysqli_error($mysqli);
-					$msg_color = 'red';
-					}
-				else $msg = "ROWID $rowid Updated";
-				
-		//	}else $msg ='Passwords dont match';
+					$msg = "Query failed [$query]" . mysqli_error($mysqli); 
+					$msg_color='red';
+				}
+				else {
+					$rowid = mysqli_insert_id($mysqli);
+		//			$msg = "ROWID $rowid added";
+					$msg = "$fname you have created an account there are $rowid Users total";
+					$last_rowid = $rowid;
+				}
 
-		 */
-	break;
-		
-		
-//delete
-	case 'Delete':
-/*
-		$query = "DELETE FROM $table WHERE rowid='$rowid'";
-		$result = mysqli_query($mysqli, $query);
-		if (!$result) {
-			$msg = "Query failed [$query] ". mysqli_error($mysqli);
-			$color = 'red';
+
+
+
+
+
+		/* 		//Alert Script
+		echo "<script >
+			alert('Welcome! $fname your account has been created!') document.location = 'http://stackoverflow.com/';
+			   </script>";
+			   */
+			
+			
+			// if account created sucessfully 
+			
+			
+		/* 		//confirm if statment
+
+			echo "<script >
+			if (confirm('Welcome! $fname your account has been created!')== true){
+
+				$msg ='you pressed ok';
 			}
-		else {
-			$msg = "ROWID $rowid deleted";
-			$last_rowid = $rowid = $fname = $lname = $role = $email = $userid = $password =$photo = NULL;
+			else{
+				$msg = '$fname you have pressed cancle';
 			}
-		break; 
-*/   
-	
-	default:
-    }	
+			   </script>"; 
+				*/
+				
+				
+				
+		/* 		// confirm shows ok/cancle button 		works
+			echo "<script >
+			confirm('Welcome! $fname your account has been created!')
+			   </script>";  
+				*/
+			   
+		/* 	   // alert 		 works
+				echo "<script >
+			alert('Welcome! $fname your account has been created!')
+			   </script>"; 
+				*/
+			   
+
+
+		// after you add an account clear the form
+			$last_rowid = $rowid = $fname = $lname = $role = $email = $userid = $password = NULL;
+
+		// send to login screen (redirect)
+							header('location: login.php');
+							exit; 
+
+
+				break; // end add
+
+
+
+		 //change 
+			case 'Change':
+
+				/* //	if($password == $confirmpassword){
+					
+						$query = "UPDATE $table SET
+								  firstname			= '$fname',
+								  lastname			= '$lname',
+								  role				= '$role',
+								  email				= '$email',
+								  userid			= '$userid',
+								  password			= '$password'
+								  WHERE rowid		= '$rowid'";
+								  
+				//				  ,
+				//				  photo				= '$photo'
+
+						$result = mysqli_query($mysqli, $query);
+						if (!$result) {
+							$msg = "QUERY failed [$query]: " . mysqli_error($mysqli);
+							$msg_color = 'red';
+							}
+						else $msg = "ROWID $rowid Updated";
+						
+				//	}else $msg ='Passwords dont match';
+
+				 */
+			break;
+				
+				
+		//delete
+			case 'Delete':
+
+				$query = "DELETE FROM $table WHERE rowid='$rowid'";
+				$result = mysqli_query($mysqli, $query);
+				if (!$result) {
+					$msg = "Query failed [$query] ". mysqli_error($mysqli);
+					$color = 'red';
+					}
+				else {
+					$msg = "ROWID $rowid deleted";
+					$last_rowid = $rowid = $fname = $lname = $role = $email = $userid = $password =$photo = NULL;
+					}
+				break; 
+		 
+			
+			default:	// no defaults
+	}// end case switch
 
 
 
@@ -287,28 +341,33 @@ $result = mysqli_query($mysqli, $query);
 
 
 
-
-
-// Output
-//	echo "<!DOCTYPE HTML><html><body>
-	
+/*	 // function for confirm delete
 echo "		  <script>
 		  function ConfirmDelete() {
 			  var x = confirm('Are you sure you want to delete?');
 			  if (x) return true; else return false;
 			  }
-		  </script>
-		  
-		  
-		  
-		  
-		  <div $bold>Here you can create an account.</div>\n";
-		  
+			   </script>";
+ */
+
+// function for confirm account button
+echo "		  <script>
+			  function ConfirmAccount() {
+			  var x = confirm('if your account is created sucessfully you will be brought to the login page');
+			  if (x) return true; else return false;
+			  }
+			</script>";
+
+
+
+// Output
+echo "		  <div $bold>Welcome Guest you should create an account.</div>\n";
+
 //display inputs		  
 	echo "<p><form action='$pgm' method='post' enctype='multipart/form-data'>
 		  <input type='hidden'			 name='last_rowid'	 value='$last_rowid'>
 		  <table   align='center'>";
-		  
+
 /* 		  <tr><td $bold>Rowid</td>
               <td><input type='text'	 name='rowid'  value='$rowid' size='09'></td></tr>
 */
@@ -318,16 +377,16 @@ echo		  "<tr><td $bold>First Name</td>
 			  <td><input type='text'	 name='lname'  value='$lname' size='15'></td></tr>
 		  <tr><td $bold>Role</td>
 			  <td><select name='role'>";
-			  
 
-			  
-		//Role drop down
-			foreach($ctgys as $value) {
-				if ($value == $role) $se = 'SELECTED'; else $se = NULL;
-				echo "<option $se>$value</option>\n";
-				}
-				
-		
+
+
+//Role drop down
+	foreach($ctgys as $value) {
+		if ($value == $role) $se = 'SELECTED'; else $se = NULL;
+		echo "<option $se>$value</option>\n";
+		}
+
+
 	echo "</select></td></tr>
 		  <tr><td $bold>Email</td>
 			  <td><input type='email'	 name='email' 	value='$email' size='40' maxlength='50'></td></tr>
@@ -339,11 +398,11 @@ echo		  "<tr><td $bold>First Name</td>
 //hide because not working			  
 //echo"			  <tr><td $bold>Photo</td>
 //				<td>[$photo]<input type= 'file' name ='photo'</tr>";
-			  
-			  
+
+
 echo"		  </table>";
-		  
-		  
+  
+  
 		  // add password confirmation
 /*
 		  <tr><td $bold>Confirm Password</td>
@@ -351,31 +410,51 @@ echo"		  </table>";
 		  
 			  <tr><td><input type='checkbox' onclick = 'showPassword()'>Show Password	</td></tr>
 */		  
-		  
 
-		  
+
+
 // Action Bar
 
 /*
      echo "<p><table><tr><td>
 		  <input type='submit' name='task' value='Show' style='background-color:lightblue;font-weight:bold;'>
- */		  
+ */	
+ // add
+ /* 
 echo "<p><table><tr><td>
 		  <input type='submit' name='task' value='Add' style='background-color:lightgreen;font-weight:bold;'>";
+	 */	  
+	// add with function on click
+echo "<p><table><tr><td>
+		  <input type='submit' name='task' value='Add' style='background-color:lightgreen;font-weight:bold;'onclick='return ConfirmAccount();'> ";
 		  
+		  
+	//tester	  
+ //<input type='submit' name='task' value='Add' style='background-color:green;font-weight:bold;'onclick='return ConfirmDelete();'>
+ 
+
+ 
+ //oG
+ 
+ 
+ 
 /* 
 		  <input type='submit' name='task' value='Change' style='background-color:orange;font-weight:bold;'>
 		  
-		  <input type='submit' name='task' value='Delete' 
-		  style='background-color:red;font-weight:bold;' onclick='return ConfirmDelete();'>&nbsp;&nbsp;&nbsp;
+		  <input type='submit' name='task' value='Delete' style='background-color:red;font-weight:bold;' onclick='return ConfirmDelete();'>
 		  
-		  <input type='submit' name='task' value='Clear' style='background-color:white;font-weight:bold;'>&nbsp;&nbsp;&nbsp;
+		  &nbsp;&nbsp;&nbsp;
+		  
+		  <input type='submit' name='task' value='Clear' style='background-color:white;font-weight:bold;'>
+		  
+		  &nbsp;&nbsp;&nbsp;
 		  
 	  	  <input type='submit' name='task' value='Previous' style='background-color:pink;font-weight:bold;'>
 		  
 	      <input type='submit' name='task' value='Next' style='background-color:yellow;font-weight:bold;'> 
-*/
-		  
+ */
+ 
+
 echo		  "</td></tr></table></form>";
 		  
 //		  <p><a href='$pgm2'><button style='color:white; background-color:green; font-weight:bold;'>Return to Roster Listing</button></a>";
@@ -385,18 +464,15 @@ echo		  "</td></tr></table></form>";
 		  <td $bold>MESSAGE: </td>
 		  <td style='color:$msg_color;'>$msg</td>
 		  </tr></table>"; 
-		 
+
 
 
 
 //end the body and the html here?? but its in the header footer
 
-		 
+
 // End of Program
-//	echo "</body></html>";
-	
-	
-	
+
 	mysqli_close($mysqli);
 
 // Sanitize Function

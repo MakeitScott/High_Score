@@ -1,5 +1,4 @@
 <?php
-
 /*
 ***		Written By: Scott Pietras
 *	games.php - game list Page
@@ -13,7 +12,6 @@
 *	
 ***		
 */
-
 
 
 /*

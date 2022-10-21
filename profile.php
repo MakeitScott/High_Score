@@ -1,5 +1,4 @@
 <?php
-
 /*
 ***		Written By: Scott Pietras
 *	Profile.php - Profile Page
@@ -7,10 +6,13 @@
 *	requires login 
 *	displays only loged in users information
 *	
+*	
+*	
 *	user alowed to change password email and username
 *	
 ***	
 */
+
 
 /*
 ***		Backlog ::todo

@@ -1,7 +1,4 @@
 <?PHP
-// 
-// Written by: 
-
 /*
 ***		Written By: Scott Pietras
 *	login.php - Website login page
@@ -48,19 +45,19 @@
   
 // Get Form Input  
 // was the "submit" button pressed  "login"
-	if (isset($_POST['login'])) {			//trim to make sure the space bar wasnt accidently pressed
-		if (isset($_POST['userid']))		$userid		= trim($_POST['userid']);		else $userid 	= NULL;
-		if (isset($_POST['password']))		$password 	= trim($_POST['password']);		else $password 	= NULL;
-		
+		if (isset($_POST['login'])) {			//trim to make sure the space bar wasnt accidently pressed
+				if (isset($_POST['userid']))		$userid		= trim($_POST['userid']);		else $userid 	= NULL;
+				if (isset($_POST['password']))		$password 	= trim($_POST['password']);		else $password 	= NULL;
+				
 // Verify Input
-		if ($userid == NULL) 		$msg = "USERID is missing";
-		if ($password == NULL) 		$msg = "PASSWORD is missing";
-		if (($userid == NULL) AND ($password == NULL)) $msg = "USERID & PASSWORD are missing";
+				if ($userid == NULL) 		$msg = "USERID is missing";
+				if ($password == NULL) 		$msg = "PASSWORD is missing";
+				if (($userid == NULL) AND ($password == NULL)) $msg = "USERID & PASSWORD are missing";
 		
 // login		
 		if ($msg == NULL) {
 			
-			//search for the user id in the database table 
+		//search for the user id in the database table 
 // Query Student Using the USERID			
 
 
@@ -97,7 +94,7 @@
 					header('location: home.php');
 					exit;
 					
-					}
+				}
 				else $msg = "Invalid Password";
 				}
 			else $msg = "USERID [$userid] is invalid";	// the first query didnt find any results 
