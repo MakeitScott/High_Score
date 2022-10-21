@@ -18,9 +18,9 @@
 ***		Backlog ::todo
 *	
 *	
-*	creat an account then send you to the log in page
+*	creat an account then send you to the log in page		done
 *	
-*	have alert / confirm message before sending you
+*	have alert / confirm message before sending you	:	yes but	the message pops up before the account is validated 
 *	
 *	
 *	
@@ -159,16 +159,16 @@ add this so the email addres is also unique
 					$msg = "ROWID $rowid not found."; 
 					$msg_color='red'; 
 					$fname = $lname = $role = $email = $userid = $password = NULL;
-					}
+				}
 				else {
 					list($fname, $lname, $role, $email, $userid, $password) = mysqli_fetch_row($result); 
 					$msg = "Row $rowid found";
 					$last_rowid = $rowid;
-					} 
+				}
 				break;
 
 
-		//add
+//add
 			case 'Add':
 				$query = "INSERT INTO $table SET
 						  firstname			= '$fname',
@@ -237,19 +237,28 @@ add this so the email addres is also unique
 			   
 
 
-		// after you add an account clear the form
+
+
+/* 		// send to login screen (redirect)			too fast
+				header('location: login.php');
+				exit; 
+ */
+
+
+//myAlert()				// this works perfectly!!
+			echo"<script>
+			alert('Welcome! $fname your account has been created sucessfully');
+			window.location = 'login.php';
+			</script>";
+
+	// after you add an account clear the form
 			$last_rowid = $rowid = $fname = $lname = $role = $email = $userid = $password = NULL;
-
-		// send to login screen (redirect)
-							header('location: login.php');
-							exit; 
-
-
+			
 				break; // end add
 
 
 
-		 //change 
+//change 
 			case 'Change':
 
 				/* //	if($password == $confirmpassword){
@@ -279,7 +288,7 @@ add this so the email addres is also unique
 			break;
 				
 				
-		//delete
+//delete
 			case 'Delete':
 
 				$query = "DELETE FROM $table WHERE rowid='$rowid'";
@@ -350,18 +359,33 @@ echo "		  <script>
 			   </script>";
  */
 
+
 // function for confirm account button
+/* 
 echo "		  <script>
 			  function ConfirmAccount() {
 			  var x = confirm('if your account is created sucessfully you will be brought to the login page');
 			  if (x) return true; else return false;
 			  }
 			</script>";
+ */
+ 
+/*  not nessessary
+echo"
+<script>
+function myAlert() {
+alert('your account has been created sucessfully');
+window.location = 'login.php';
+}
+</script>
+";
+ */
+
 
 
 
 // Output
-echo "		  <div $bold>Welcome Guest you should create an account.</div>\n";
+echo "		  <div $bold>Welcome Guest since your here you should create an account.</div>\n";
 
 //display inputs		  
 	echo "<p><form action='$pgm' method='post' enctype='multipart/form-data'>
@@ -415,18 +439,17 @@ echo"		  </table>";
 
 // Action Bar
 
-/*
-     echo "<p><table><tr><td>
-		  <input type='submit' name='task' value='Show' style='background-color:lightblue;font-weight:bold;'>
- */	
+
  // add
- /* 
+ 
 echo "<p><table><tr><td>
 		  <input type='submit' name='task' value='Add' style='background-color:lightgreen;font-weight:bold;'>";
-	 */	  
-	// add with function on click
+		  
+		  
+/* 	// add with function on click
 echo "<p><table><tr><td>
 		  <input type='submit' name='task' value='Add' style='background-color:lightgreen;font-weight:bold;'onclick='return ConfirmAccount();'> ";
+		   */
 		  
 		  
 	//tester	  
@@ -436,6 +459,10 @@ echo "<p><table><tr><td>
  
  //oG
  
+ /*
+     echo "<p><table><tr><td>
+		  <input type='submit' name='task' value='Show' style='background-color:lightblue;font-weight:bold;'>
+ */	
  
  
 /* 
