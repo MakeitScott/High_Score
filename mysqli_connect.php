@@ -1,25 +1,32 @@
 <?php
-// mysqli_connect.php - Connect to MySQL and The *__high_score__* database  
+/*
+***		Written By: Scott Pietras
+*	mysqli_connect.php - Connect to MySQL and The *__high_score__* database
+*	
+*		
+*	
+*	  
+*	
+*	
+*	
+*	
+***		
+*/
 
 
-
-
-//change the name of the file  which files is this located in 
-
-
-	/*
-	***
-	*
-	* 
-	*	Written by:
-	* 
-	* 
-	* 
-	* 
-	*		Back log:
-	*	
-	***
-	*/
+/*
+***		Backlog ::todo
+*	
+*	
+*	change the name of the file  which files is this located in 
+*	
+*	
+*	
+*	
+*	
+*	
+***		
+*/
 
 
 
@@ -27,10 +34,8 @@
 	$mysql_host			= 'localhost';
 	$mysql_userid		= 'root';
 	$mysql_password		= NULL;
-	
 	$mysql_database		= 'high_score';
-//old
-//	$mysql_database		= 'bcs350';
+
 	
 	
 

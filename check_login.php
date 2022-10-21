@@ -1,7 +1,34 @@
 <?php
-//check login 
-//requires login 
-// Written by: 
+/*
+***		Written By: Scott Pietras
+*	check_login.php - check login Page
+*	
+*		
+*	requires login 
+*	
+*	
+*	
+*	
+*	
+***		
+*/
+
+
+/*
+***		Backlog ::todo
+*	
+*	
+*	
+*	
+*	
+*	
+*	
+*	
+*	
+***		
+*/
+
+
 
 
 

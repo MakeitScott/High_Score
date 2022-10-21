@@ -1,16 +1,31 @@
 <?php
+/*
+***		Written By: Scott Pietras
+*	session.php - start session Page
+*	
+*		
+*	
+*	
+*	
+*	
+*	
+*	
+***		
+*/
 
 
 /*
-***
-* Written By Scott Pietras
-*
-*
-*
-*
-*
-*
-***
+***		Backlog ::todo
+*	
+*	
+*	
+*	
+*	
+*	
+*	
+*	
+*	
+***		
 */
 
 
@@ -34,21 +49,6 @@
 		$seshuserid = NULL;
 		//$time 	NULL;
 		}
-	
-
-	
-/*
-****** back log ******
-*
-* 
-*
-* 
-* 
-* 
-*
-*
-*
-*/
 	
 	
 	

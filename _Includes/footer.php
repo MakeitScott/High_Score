@@ -1,5 +1,32 @@
 <?php
-// footer.php
+/*
+***		Written By: Scott Pietras
+*	footer.php - footer Page
+*	
+*		
+*	included on all pages
+*	
+*	
+*	
+*	
+*	
+***		
+*/
+
+
+/*
+***		Backlog ::todo
+*	
+*	
+*	
+*	
+*	
+*	
+*	
+*	
+*	
+***		
+*/
 
 
 // Output

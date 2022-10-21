@@ -1,6 +1,34 @@
-
-
 <?php
+/*
+***		Written By: Scott Pietras
+*	logoff.php - logoff Page
+*	
+*		
+*	
+*	
+*	
+*	
+*	
+*	
+***		
+*/
+
+
+/*
+***		Backlog ::todo
+*	
+*	
+*	
+*	
+*	
+*	
+*	
+*	
+*	
+***		
+*/
+
+
 // Start Session	
 	include('session.php');
 	

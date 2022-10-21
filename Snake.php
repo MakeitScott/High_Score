@@ -1,5 +1,4 @@
 <?php
-
 /*
 ***		Written By: Scott Pietras
 *	Snake.php - Snake game Page
@@ -15,14 +14,12 @@
 */
 
 
-
 /*
-***		Backlog
+***		Backlog ::todo
 *	
 *	the whole screen needs to be locked in place and
- not have a scroll bar that moves when the games played using the arrow kays
-*	
-*	
+*	not have a scroll bar that moves when the games played using the arrow kays
+*	just like in the driving game
 *	
 *	
 *	

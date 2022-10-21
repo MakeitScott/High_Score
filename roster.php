@@ -1,8 +1,4 @@
 <?php
-
-
-
-
 /*
 ***		Written By: Scott Pietras
 *	roster.php - roster list Page
@@ -18,9 +14,8 @@
 */
 
 
-
 /*
-***		Backlog
+***		Backlog ::todo
 *	
 *	
 *	
@@ -32,11 +27,6 @@
 *	
 ***		
 */
-
-
-
-
-
 
 
 

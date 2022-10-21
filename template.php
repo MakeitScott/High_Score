@@ -1,5 +1,4 @@
 <?php
-
 /*
 ***		Written By: Scott Pietras
 *	template.php - template copy Page
@@ -15,9 +14,8 @@
 */
 
 
-
 /*
-***		Backlog
+***		Backlog ::todo
 *	
 *	
 *	

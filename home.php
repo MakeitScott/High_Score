@@ -1,5 +1,4 @@
 <?php
-
 /*
 ***		Written By Scott Pietras
 *	home.php - Home Page
@@ -13,7 +12,6 @@
 *	
 ***		
 */
-
 
 
 /*

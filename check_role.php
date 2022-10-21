@@ -1,8 +1,32 @@
 <?php
-//check role of user
+/*
+***		Written By: Scott Pietras
+*	check_role.php - check role of user Page
+*	
+*		check role of user
+*	
+*	
+*	
+*	requires login 
+*	
+*	
+***		
+*/
 
-//requires login 
-// Written by: 
+
+/*
+***		Backlog ::todo
+*	
+*	
+*	
+*	
+*	
+*	
+*	
+*	
+*	
+***		
+*/
 
 
 

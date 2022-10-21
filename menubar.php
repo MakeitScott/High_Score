@@ -1,5 +1,4 @@
 <?php
-// menubar.php
 /*
 ***		Written By: Scott Pietras
 *	menubar.php - include file for the menu bar
@@ -15,22 +14,15 @@
 */
 
 
-
 /*
 ***		Backlog ::todo
 *	
 * * * *	move menubar to Includes folder  upate all other files
-
-
-
-
+*	
 *	find function that will remove underscore and replace with a space			YES
 *	https://www.w3schools.com/Php/func_string_str_replace.asp
-
-
+*	
 *	create login button does not show unless you are a guest YES
-*	
-*	
 *	
 *
 ***		

@@ -1,20 +1,17 @@
 <?php
-//
 /*
-***
-*
-*Written by Scott Pietras
-*
+***		Written by Scott Pietras
+*	header.php - header Page
+*	
+*	
 *This is the header file included on all pages text formatting and colors here
 ******* also need to include session above this for header $user and $role variables
-*
+*	
 * 			/_Include/header.html
-*
-*
-*
-***
+*	
+*	
+***	
 */
-
 
 
 /*
@@ -27,7 +24,7 @@
 *	
 *	*logo on the side put it in the table so nothing gets shifted
 *	
-*	
+*	include session??  then delete include session in all other pages
 ***		
 */
 
