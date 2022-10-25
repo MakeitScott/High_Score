@@ -21,8 +21,8 @@
 *	verify email and username  are unique
 *	
 *	...is there an error when you try to update other information without changing the username or email
-*	
-*	
+*	***if you dont change the username or email then it wont let you update anything
+*	::todo
 *	add dropdown  to change status
 *	 banned or deleted
 ***		
