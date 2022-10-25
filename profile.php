@@ -100,7 +100,44 @@ print_r($_SESSION);
 			if (($email != NULL) AND (!filter_var($email, FILTER_VALIDATE_EMAIL)))
 				$msg .= 'Invalid Email Address<br>';
 
+
+/* 		::todo 	//varify the userid is unique
+		need to add seccond username and email variable?
 		
+		 if (userIDinput != Session_Userid) then  check if it is unique
+		
+		// Verify the userid is unique
+			$query = "SELECT userid
+					  FROM $table 
+					  WHERE userid = '$userid'";
+			$result = mysqli_query($mysqli, $query);
+			if (!$result) echo "Query Error [$query] " . mysqli_error($mysqli);
+
+// If USERID is FOUND,  then dont allow to continue		
+	if (mysqli_num_rows($result) > 0) {
+		$msg .= "User ID $userid is taken already<br>";
+			//$userid =$password = null;
+	}
+
+
+// Verify the Email is unique
+			$query = "SELECT userid
+					  FROM $table 
+					  WHERE email = '$email'";
+			$result = mysqli_query($mysqli, $query);
+			if (!$result) echo "Query Error [$query] " . mysqli_error($mysqli);
+
+// If email is FOUND,  then dont allow to continue		
+	if (mysqli_num_rows($result) > 0) {
+		$msg .= "The Email $email has an account already<br>";
+	}
+
+
+*/
+
+
+
+
 /*::todo 	//varify the userid is unique  
 //you need to select and list all the stuff in this querry or it will all disapapear
 

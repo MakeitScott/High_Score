@@ -30,11 +30,19 @@
 
 
 
+10/25	
+
+Profile.php   need to update email and user varification
+
+
+need format of games to be the same size
+
+need format of game icons to be the same size
+
+
 
 
 // 9/21/22
-
-
 back logs created  on seperate file pages 
 create new database
 update home page

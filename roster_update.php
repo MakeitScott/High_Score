@@ -38,7 +38,7 @@
 	include('menubar.php');
 	
 	echo "<p>This is where Admin can modify All Users
-		  <p>$user is Logged on and can acess this page";
+		  <p>$user is Logged on and can acess this page with $role";
 
 
 	require('upload.php');
@@ -50,7 +50,7 @@
 	
 // Variables
 	$pgm		= 'roster_update.php'; 
-	$pgm2		= 'roster.php'; 		//used for back button
+	$pgm2		= 'users.php'; 		//used for back button
 	
 
 	$table 		=	'userinfo';	
@@ -294,7 +294,7 @@ $result = mysqli_query($mysqli, $query);
 			  }
 		  </script>
 		  
-		  <div $bold>Roster Update</div>\n";
+		  <div $bold>User Update</div>\n";
 		  
 //display inputs		  
 	echo "<p><form action='$pgm' method='post' enctype='multipart/form-data'>
@@ -361,7 +361,7 @@ echo"		  </table>";
 	      <input type='submit' name='task' value='Next' style='background-color:yellow;font-weight:bold;'>
 		  </td></tr></table></form>
 		  
-		  <p><a href='$pgm2'><button style='color:white; background-color:green; font-weight:bold;'>Return to Roster Listing</button></a>";
+		  <p><a href='$pgm2'><button style='color:white; background-color:green; font-weight:bold;'>Return to Users Listing</button></a>";
 	
 // Message
     echo "<p><table><tr>

@@ -1,11 +1,11 @@
 <?php
 /*
 ***		Written By: Scott Pietras
-*	users.php - roster list Page
+*	users.php - user list Page
 *	
 *		
 *	
-*	this will show eveyone and everything from the finalpeople table to admin 
+*	this will show eveyone and everything from the userinfo table to admin 
 *	
 *	
 *	but will only show name role email and picture to students
@@ -40,10 +40,11 @@
 
 	include('_Includes/header.php');
 	include('menubar.php');
-	echo "<p>This is the Roster view Page
+	
+	echo "<p>This is the User view Page
 		  <p>$user is Logged on and can acess this page with $role view";
-		  
-		  
+
+
 
 
 
@@ -108,7 +109,7 @@ require('mysqli_connect.php');
 	
 // Process Query Results
 	echo "<!DOCTYPE HTML><html><body>
-		  <div $bold>Roster</div>\n";
+		  <div $bold>Users</div>\n";
 
 // Role DropDown
 	echo "<p><form action='$pgm' method='post'>
