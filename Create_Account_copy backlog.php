@@ -1,6 +1,4 @@
 <?php
-// 
-//
 /*
 ***		Written By: Scott Pietras
 *	Create_Account.php - form to add to sql table Page
@@ -16,9 +14,8 @@
 */
 
 
-
 /*
-***		Backlog
+***		Backlog ::todo
 *	
 *	
 *	change from "student" to "user" or Gamer
@@ -27,6 +24,7 @@
 *	
 *	
 *	double html doccumentation and body tags
+*	
 *	
 *	
 ***		
@@ -48,7 +46,7 @@
 
 	
 /* 	
-	echo "<p>This is where Admin can modify the roster
+	echo "<p>This is where Admin can modify all Users
 		  <p>$user is Logged on and can acess this page";
  */
 
@@ -61,7 +59,7 @@
 	
 // Variables
 	$pgm		= 'roster_update.php'; 
-	$pgm2		= 'roster.php'; 
+//	$pgm2		= 'roster.php'; 	// used for back button
 //	$table		= 'finalpeople';
 $table 		=	'userinfo';	
 	$bold		= "style='font-weight:bold;'";

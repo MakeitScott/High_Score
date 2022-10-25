@@ -16,14 +16,16 @@
 
 /*
 ***		Backlog ::todo
-*	
-*	
 *	creat an account then send you to the log in page		done
 *	
 *	have alert / confirm message before sending you	:	yes but	the message pops up before the account is validated 
 *	
 *	
+*	*	change from "student" to "user" or Gamer
+*				change rest of database selec
+*	hide this in menubar if you are loged in 
 *	
+*	double html doccumentation and body tags
 *	
 ***		
 */
@@ -38,7 +40,7 @@
 	include('menubar.php');
 	
 /* 	
-	echo "<p>This is where Admin can modify the roster
+	echo "<p>This is where Admin can modify All Users
 		  <p>$user is Logged on and can acess this page";
  */
 
@@ -52,7 +54,10 @@
 	
 // Variables
 	$pgm		= 'Create_Account.php'; 
-	$pgm2		= 'roster.php'; 
+	
+
+//	$pgm2		= 'roster.php'; 	// used for back button
+
 	$table 		= 'userinfo';	
 	$bold		= "style='font-weight:bold;'";
 	$center		= "align='center'";
@@ -121,8 +126,8 @@
 
 // If USERID is FOUND,  then dont allow to continue	and clear user and password form		
 	if (mysqli_num_rows($result) > 0) {
-		$msg = "User ID $userid is taken already";
-			$userid =$password = null;
+		$msg .= "User ID $userid is taken already<br>";
+			//$userid =$password = null;
 	}
 
 
@@ -135,7 +140,7 @@
 
 // If email is FOUND,  then dont allow to continue		
 	if (mysqli_num_rows($result) > 0) {
-		$msg = "The Email $email has an account already";
+		$msg .= "The Email $email has an account already<br>";
 	//		$userid =$password = null;
 	}
 

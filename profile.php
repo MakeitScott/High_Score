@@ -59,27 +59,12 @@ print_r($_SESSION);
 //	mysqli_set_charset($mysqli, 'latin1'); 
 	
 	
-	
-/*
-***		
-*	
-*	
-*	
-*	// Variables
-	$pgm				= 'admin_roster.php'; 
-*	
-*	
-*	
-*	
-*	
-***		
-*/
-	
+
 	
 	
 // Variables
 	$pgm		= 'profile.php'; 
-	$pgm2		= 'roster.php'; 
+
 	$table		= 'userinfo'; 
 	
 	$bold		= "style='font-weight:bold;'";
@@ -348,9 +333,7 @@ echo"		  </table>";
 		  <input type='submit' name='task' value='Change' style='background-color:orange;font-weight:bold;'>
 		  </td></tr></table></form>";
 
-//delete this
-//echo"		  <p><a href='$pgm2'><button style='color:white; background-color:green; font-weight:bold;'>Return to Roster Listing</button></a>";
-	
+
 	
 	
 // Message

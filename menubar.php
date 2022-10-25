@@ -35,13 +35,13 @@
 // for menu bar links 
 	$pages		= array('home' 			=> 'mediumslateblue', 
 //						'public' 		=> 'aqua', 
-						'roster' 		=> 'gold', 
+						'users' 		=> 'gold', 
 //						'faculty'		=> 'orangered',						
 						'profile'		=> 'turquoise',
 //						'your_grades'	=>	'orangered',
 //						'assignments'	=> 'red',
 //						'assigngrades'	=> 'aqua',
-//						'admin_roster'	=> 'magenta'
+
 //						'class_grades'	=> 'magenta',
 						'games'			=> 'magenta',
 						'Create_Account'=> 'orange',
@@ -56,13 +56,13 @@
 
 // if loging required			include('check_login.php');	
 
-	$restricted	= array('roster', 'profile','your_grades');
+	$restricted	= array('users', 'profile','your_grades');
 
 
 //if role 						include('check_role.php');
 
 
-	$role_pages = array(/*'faculty',  /*'admin_roster',*/ 'roster', 'roster_update','assigngrades','class_grades','Snake' );
+	$role_pages = array(/* 'faculty','users',*/ 'roster_update','assigngrades','class_grades','Snake' );
 	$role_value = 'Admin'; 
 
 //hide if logged in

@@ -1,7 +1,7 @@
 <?php
 /*
 ***		Written By: Scott Pietras
-*	roster.php - roster list Page
+*	users.php - roster list Page
 *	
 *		
 *	
@@ -18,9 +18,9 @@
 ***		Backlog ::todo
 *	
 *	
+*	remove seccond html doc type  top and bottom
 *	
-*	
-*	
+*	change Roster to Users
 *	
 *	
 *	
@@ -51,23 +51,10 @@
 require('mysqli_connect.php');
 
 
-/*
-***		
-*	
-*	
-*	
-*	// Variables
-	$pgm				= 'admin_roster.php'; 
-*	
-*	
-*	
-*	
-*	
-***		
-*/
+
 	
 // Variables
-	$pgm				= 'roster.php'; 
+	$pgm				= 'users.php'; 		//this program
 	$table				= "userinfo"; 
 
 	$bold				= "style='font-weight:bold;'";
@@ -109,6 +96,14 @@ require('mysqli_connect.php');
 // Execute the Query
 	$result = mysqli_query($mysqli, $query);
 	if (!$result) echo "QUERY [$query]: " . mysqli_error($mysqli);
+	
+	
+	/*
+	::todo
+	remove seccond html doc type
+	
+	*/
+	
 	
 	
 // Process Query Results
@@ -168,10 +163,10 @@ else $color = 'black';
 				  <font color= 'gold'>$email</a></td>
 				  
 				  <td><img src = '$photo' width = '100'></td>";
-				  
-				  
-				  
-				  
+
+
+
+
 // admin only results
 if($_SESSION['role'] == 'Admin'){
 			

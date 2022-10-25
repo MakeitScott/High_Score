@@ -1,7 +1,32 @@
 <?php
-// 
-//requires login by admin
-// Written by: 
+/*
+***		Written By: Scott Pietras
+*	Roster_Update.php - update an account Page
+*	
+*		requires login by admin
+*	
+*	
+*	
+*	
+*	
+*	
+***		
+*/
+
+
+/*
+***		Backlog ::todo
+*	
+*	
+*	verify email and username  are unique
+*	
+*	...is there an error when you try to update other information without changing the username or email
+*	
+*	
+*	add dropdown  to change status
+*	 banned or deleted
+***		
+*/
 
 
 	include('session.php');
@@ -11,7 +36,8 @@
 
 	include('_Includes/header.php');
 	include('menubar.php');
-	echo "<p>This is where Admin can modify the roster
+	
+	echo "<p>This is where Admin can modify All Users
 		  <p>$user is Logged on and can acess this page";
 
 
@@ -24,9 +50,10 @@
 	
 // Variables
 	$pgm		= 'roster_update.php'; 
-	$pgm2		= 'roster.php'; 
-//	$table		= 'finalpeople';
-$table 		=	'userinfo';	
+	$pgm2		= 'roster.php'; 		//used for back button
+	
+
+	$table 		=	'userinfo';	
 	$bold		= "style='font-weight:bold;'";
 	$center		= "align='center'";
 	$ctgys		= array('Select', 'Student', 'Admin');
@@ -46,6 +73,7 @@ $table 		=	'userinfo';
 		if (isset($_POST['task']))  		$task 			= sanitize($mysqli, $_POST['task']);			else $task  = 'First';
 		if (isset($_POST['last_rowid'])) 	$last_rowid 	= sanitize($mysqli, $_POST['last_rowid']); 		else $last_rowid = NULL;	
 		if (isset($_GET['r']))				{$rowid			= sanitize($mysqli, $_GET['r']);			$task = 'Show';}
+
 
 // Verify Input
 	if (($task == 'Add') OR ($task == 'Change')) {
@@ -67,7 +95,41 @@ $table 		=	'userinfo';
 		if ($role == 'Select') $role = NULL;
 		if ($role == NULL) $msg .= 'role is missing<br>';
 		else if (!in_array($role, $ctgys)) $msg .= 'Invalid role<br>';
-		}//end varification
+		
+		
+		
+		
+		
+// Verify the userid is unique
+			$query = "SELECT userid
+					  FROM $table 
+					  WHERE userid = '$userid'";
+			$result = mysqli_query($mysqli, $query);
+			if (!$result) echo "Query Error [$query] " . mysqli_error($mysqli);
+
+// If USERID is FOUND,  then dont allow to continue		
+	if (mysqli_num_rows($result) > 0) {
+		$msg .= "User ID $userid is taken already<br>";
+			//$userid =$password = null;
+	}
+
+
+// Verify the Email is unique
+			$query = "SELECT userid
+					  FROM $table 
+					  WHERE email = '$email'";
+			$result = mysqli_query($mysqli, $query);
+			if (!$result) echo "Query Error [$query] " . mysqli_error($mysqli);
+
+// If email is FOUND,  then dont allow to continue		
+	if (mysqli_num_rows($result) > 0) {
+		$msg .= "The Email $email has an account already<br>";
+	}
+	
+	
+		
+		
+		}//end input varification
 		
 // Change or Delete - Validate Last ROWID	
 		if (($task == 'Change') OR ($task == 'Delete')) {

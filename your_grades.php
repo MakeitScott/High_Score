@@ -20,7 +20,7 @@
 		if ($role == 'Admin'){
 			echo "<script >
        window.onload = function () { alert('you are an $role you dont have grades');
-	   } 
+	  window.location = 'home.php'; } 
 </script>"; 
 		}
 		
@@ -48,8 +48,10 @@ print_r($_SESSION);
 	
 	
 // Variables
-	$pgm		= 'profile.php'; 
-	$pgm2		= 'admin_roster.php'; 
+
+//	$pgm		= 'profile.php'; 
+//	$pgm2		= 'admin_roster.php'; 
+	
 	$table		= 'finalpeople'; 
 	
 	$bold		= "style='font-weight:bold;'";
