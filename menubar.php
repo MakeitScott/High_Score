@@ -45,7 +45,7 @@
 //						'class_grades'	=> 'magenta',
 						'games'			=> 'magenta',
 						'Create_Account'=> 'orange',
-						'roster_update'	=>	'lime',
+						'user_update'	=>	'lime',
 //						'template'		=> 'magenta',						
 						'Snake'			=> 'magenta',						
 						'login' 		=> 'plum'	);
@@ -62,7 +62,7 @@
 //if role 						include('check_role.php');
 
 
-	$role_pages = array(/* 'faculty','users',*/ 'roster_update','assigngrades','class_grades','Snake' );
+	$role_pages = array(/* 'faculty','users',*/ 'user_update','assigngrades','class_grades','Snake' );
 	$role_value = 'Admin'; 
 
 //hide if logged in

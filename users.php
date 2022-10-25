@@ -175,7 +175,7 @@ if($_SESSION['role'] == 'Admin'){
 				  <td>$password</td>
 				  
 				  
-				  <td><a href='roster_update.php?r=$rowid'>
+				  <td><a href='user_update.php?r=$rowid'>
 				  <font color= 'orange'>UPDATE</a></td>
 				  </tr>\n";
 				  

@@ -1,7 +1,7 @@
 <?php
 /*
 ***		Written By: Scott Pietras
-*	Roster_Update.php - update an account Page
+*	user_update.php - update an account Page
 *	
 *		requires login by admin
 *	
@@ -49,7 +49,7 @@
 	mysqli_set_charset($mysqli, 'latin1'); 
 	
 // Variables
-	$pgm		= 'roster_update.php'; 
+	$pgm		= 'user_update.php'; 	// this program
 	$pgm2		= 'users.php'; 		//used for back button
 	
 
