@@ -8,7 +8,7 @@
 *	this will show eveyone and everything from the userinfo table to admin 
 *	
 *	
-*	but will only show name role email and picture to students
+*	but will only show name role email and picture to Gamers
 *	
 ***		
 */
@@ -22,7 +22,7 @@
 *	
 *	change Roster to Users
 *	
-*	
+*	make it so users can only see other users but admin can see everyone
 *	
 *	
 ***		
@@ -59,7 +59,7 @@ require('mysqli_connect.php');
 	$table				= "userinfo"; 
 
 	$bold				= "style='font-weight:bold;'";
-	$ctgys				= array(	"Student" => "green",
+	$ctgys				= array(	"Gamer" => "green",
 									"Admin" => "red");
 	
 	$sorts				= array ('firstname', 'lastname', 'role', 'email');
@@ -108,8 +108,9 @@ require('mysqli_connect.php');
 	
 	
 // Process Query Results
-	echo "<!DOCTYPE HTML><html><body>
-		  <div $bold>Users</div>\n";
+//	echo "<!DOCTYPE HTML><html><body>";
+	
+		  echo "<div $bold>Users</div>\n";
 
 // Role DropDown
 	echo "<p><form action='$pgm' method='post'>
@@ -151,7 +152,7 @@ if($_SESSION['role'] == 'Admin'){
 		
 		
 
-if ($role == 'Student')$color = 'lime';
+if ($role == 'Gamer')$color = 'lime';
 else if ($role == 'Admin')$color = 'blue';
 else $color = 'black';
 

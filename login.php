@@ -58,7 +58,7 @@
 		if ($msg == NULL) {
 			
 		//search for the user id in the database table 
-// Query Student Using the USERID			
+// Query Gamer Using the USERID			
 
 
 /*

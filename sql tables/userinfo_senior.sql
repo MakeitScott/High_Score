@@ -49,13 +49,13 @@ CREATE TABLE IF NOT EXISTS `userInfo` (
 INSERT INTO `userInfo` (`rowid`, `firstname`, `lastname`, `email`, `userid`, `password`, `role`, `photo`) VALUES
 
 (1, 'Bugs', 'Bunny', 'bbunny@gmail.com', 'bb', 'bb', 'Admin', 'images/1.png'),
-(2, 'Daffy', 'Duck', 'dduck@aol.com', 'dd', 'dd', 'Student', 'images/2.png'),
-(3, 'Marvin', 'Martian', 'mmartian@aol.com', 'marvin', 'marvin', 'Student', 'images/3.png'),
-(4, 'Porky', 'Pig', 'porkypig@aol.com', 'ppig', 'porkypig', 'Student', NULL),
+(2, 'Daffy', 'Duck', 'dduck@aol.com', 'dd', 'dd', 'Gamer', 'images/2.png'),
+(3, 'Marvin', 'Martian', 'mmartian@aol.com', 'marvin', 'marvin', 'Gamer', 'images/3.png'),
+(4, 'Porky', 'Pig', 'porkypig@aol.com', 'ppig', 'porkypig', 'Gamer', NULL),
 (5, 'Elmer', 'Fudd', 'efudd@yahoo.com', 'efudd', 'elmerfudd', 'Admin', 'images/5.png'),
-(6, 'Road', 'Runner', 'rrunner@gmail.com', 'rrunner', 'roadrunner', 'Student', 'images/6.jpg'),
-(7, 'Tweety', 'Bird', 'tBird@aol.com', 'tweety', 'bird', 'Student', 'images/7.png'),
-(8, 'Foghorn', 'Leghorn', 'f_leghorn@aol.com', 'fog', 'leg', 'Student', NULL);
+(6, 'Road', 'Runner', 'rrunner@gmail.com', 'rrunner', 'roadrunner', 'Gamer', 'images/6.jpg'),
+(7, 'Tweety', 'Bird', 'tBird@aol.com', 'tweety', 'bird', 'Gamer', 'images/7.png'),
+(8, 'Foghorn', 'Leghorn', 'f_leghorn@aol.com', 'fog', 'leg', 'Gamer', NULL);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

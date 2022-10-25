@@ -56,7 +56,7 @@
 	$table 		=	'userinfo';	
 	$bold		= "style='font-weight:bold;'";
 	$center		= "align='center'";
-	$ctgys		= array('Select', 'Student', 'Admin');
+	$ctgys		= array('Select', 'Gamer', 'Admin');
 
 	$msg		= NULL;
 	$msg_color	= 'black';

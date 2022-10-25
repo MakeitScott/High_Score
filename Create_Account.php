@@ -21,7 +21,7 @@
 *	have alert / confirm message before sending you	:	yes but	the message pops up before the account is validated 
 *	
 *	
-*	*	change from "student" to "user" or Gamer
+*	*	change from "Gamer" to "user" or Gamer
 *				change rest of database selec
 *	hide this in menubar if you are loged in 
 *	
@@ -62,10 +62,10 @@
 	$bold		= "style='font-weight:bold;'";
 	$center		= "align='center'";
 	
-//	$ctgys		= array('Select', 'Student', 'Admin');
-	$ctgys		= array('Select', 'Student');
+//	$ctgys		= array('Select', 'Gamer', 'Admin');
+	$ctgys		= array('Select', 'Gamer');
 // if role is admin allow admin to make other admin
-	if($role == 'Admin') $ctgys		= array('Select', 'Student', 'Admin');
+	if($role == 'Admin') $ctgys		= array('Select', 'Gamer', 'Admin');
 
 	$msg		= NULL;
 	$msg_color	= 'aqua';
