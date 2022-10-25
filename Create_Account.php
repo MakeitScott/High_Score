@@ -106,12 +106,13 @@
 
 /* 
 *
-make into a function?
-add this so the email addres is also unique
+*	make into a function?
+*	add this so the email addres is also unique
 *
 */
 
- // varify the userid is unique
+
+// Verify the userid is unique
 			$query = "SELECT userid
 					  FROM $table 
 					  WHERE userid = '$userid'";
@@ -124,6 +125,19 @@ add this so the email addres is also unique
 			$userid =$password = null;
 	}
 
+
+// Verify the Email is unique
+			$query = "SELECT userid
+					  FROM $table 
+					  WHERE email = '$email'";
+			$result = mysqli_query($mysqli, $query);
+			if (!$result) echo "Query Error [$query] " . mysqli_error($mysqli);
+
+// If email is FOUND,  then dont allow to continue		
+	if (mysqli_num_rows($result) > 0) {
+		$msg = "The Email $email has an account already";
+	//		$userid =$password = null;
+	}
 
 
 
