@@ -20,10 +20,11 @@
 *	
 *	
 *	
+*	dont display the password in admin 
+*	have a way to reset the password to a default 
+		get first and last name and insert like f_n_1234
 *	
-*	
-*	
-*	
+*	have a way for users to change their first and las name
 *	
 ***		
 */

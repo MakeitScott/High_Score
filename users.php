@@ -22,9 +22,12 @@
 *	
 *	change Roster to Users
 *	
-*	make it so users can only see other users but admin can see everyone
+*	make it so users can only see other users but admin can see everyone	done
+*	admin have the dropdown  and gamers are only able to see other gamers
 *	
-*	
+
+**** theres a problem with the sorting dropdown it only sorts if ctgy is null
+
 ***		
 */
 
@@ -67,6 +70,11 @@ require('mysqli_connect.php');
 
 
 
+
+
+
+
+
 // Get Input Catagory
 	if(isset ($_POST['ctgy'])) $ctgy = $_POST['ctgy']; else $ctgy = NULL;
 	if ($ctgy == 'All')  $ctgy = NULL;
@@ -75,9 +83,35 @@ require('mysqli_connect.php');
 	if(isset ($_POST['sort'])) $sort = $_POST['sort']; else $sort = 'lastname';
 	if ($sort == 'Select') $sort = NULL;
 	
+/* // Process Input  og
+	if ($ctgy != NULL) $where = "WHERE role = '$ctgy'";
+	else $where = NULL;
+*/
+	 
+	 
+	 //this works
 // Process Input
 	if ($ctgy != NULL) $where = "WHERE role = '$ctgy'";
 	else $where = NULL;
+	
+	
+/*   	//only show gamers if you are a gamer
+	if($role == 'Admin'){
+		//$where = "WHERE role = Gamer";
+		if ($ctgy != NULL) $where = "WHERE role = '$ctgy'";		else $where = NULL;
+		
+}// else you are a gamer 
+else $where = "WHERE role = 'Gamer'"; 
+*/
+
+
+
+
+  	//only show gamers if you are a gamer
+//	if($role == 'Gamer')	$where = "WHERE role = 'Gamer'";
+
+
+	
 	
 	switch($sort) {
 		case 'firstname': 	$sortby = 'firstname, lastname'; break;
@@ -112,7 +146,29 @@ require('mysqli_connect.php');
 	
 		  echo "<div $bold>Users</div>\n";
 
-// Role DropDown
+
+
+ 		// 	dont show dropdwn unless youre admin 			works  but then you cant sort?
+//if($role == 'Admin'){
+	
+	// Role DropDown
+	echo "<p><form action='$pgm' method='post'>";
+	
+	echo 	"Role <select name='ctgy' onchange='this.form.submit()'>
+		  <option>All</option>";
+	foreach($ctgys as $key => $value){
+		if ($key == $ctgy) $se='SELECTED'; else $se = NULL;
+		echo "<option $se>$key</option>\n";
+		}
+	echo "</select>";
+	
+//	}			//end if admin
+ 
+
+
+/* 		// Role DropDown			does this post the admin/Gamer role??
+		
+
 	echo "<p><form action='$pgm' method='post'>
 		  Role <select name='ctgy' onchange='this.form.submit()'>
 		  <option>All</option>";
@@ -121,6 +177,9 @@ require('mysqli_connect.php');
 		echo "<option $se>$key</option>\n";
 		}
 	echo "</select>";
+*/
+
+	
 	
 // Sort By DropDown
 	echo " Sort By <select name='sort' onchange='this.form.submit()'>
@@ -133,7 +192,7 @@ require('mysqli_connect.php');
 	
 	
 	
-// Output Phonebook table	
+// Output User table	
 	echo "<p><table border='frame' rules='all' cellborder='5' cellpadding='5'>
 		  <tr><td $bold>Name</td>
 			  <td $bold>Role</td>		  
@@ -155,6 +214,7 @@ if($_SESSION['role'] == 'Admin'){
 if ($role == 'Gamer')$color = 'lime';
 else if ($role == 'Admin')$color = 'blue';
 else $color = 'black';
+
 
 		
 		echo "<tr><td> $fname $lname</td>
@@ -188,8 +248,8 @@ if($_SESSION['role'] == 'Admin'){
 
 
 // End of Program
-	echo "</table>
-		  </body></html>";
+	echo "</table>";
+//		  </body></html>";
 	mysqli_close($mysqli);
 
 

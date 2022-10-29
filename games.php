@@ -61,6 +61,7 @@
 	
 
 
+/*			//old no pitures
 
 echo"
 <table>
@@ -68,26 +69,141 @@ echo"
     <td><a href='Games/Racing/CarDriving.html'>				Car Racing</a></td>
   </tr>
   <tr>
-    <td><a href='Games/Snake/index.html'>					Snake</a></td>
+    <td><a href='snake.php'>					Snake</a></td>
   </tr>  
   <tr>
-    <td><a href='Games/DinoRun2/index.html'>				Dino Run</a>
+    <td><a href='Games/DinoRun2/index.html'>				Dino Run</a></td>
   </tr> 
   <tr>
-    <td><a href='Games/flappybird/index.html'>				Flappy Bird!</a>
+    <td><a href='Games/flappybird/index.html'>				Flappy Bird!</a></td>
   </tr>  
   <tr>
-    <td><a href='Games/Gravity_Ball_Game/index.html'>		Gravity Ball Game</a>
+    <td><a href='Games/GravityBallGame/index.html'>		Gravity Ball</a></td>
+  </tr>
+  
+    <tr>
+    <td><a href='Games/2048/index.html'>		2048</a></td>
+  </tr>
+    <tr>
+    <td><a href='Games/Tetris/index.html'>		Tetris</a></td>
   </tr>
 </table>
 ";
 
+*/
+
+
+
+
+/*  this is 1 column 7 rows of games
+
+echo"
+<table >	<tr><td align='center'>
+  <tr>	
+    <td align='center'><a href='Games/Racing/CarDriving.html'>		
+			<img src = 'Games/icons/david_race.png' style='width:40%;height:40%';>			</a></td>
+  </tr>
+  <tr>
+    <td align='center'><a href='snake.php'>		
+			<img src = 'Games/icons/david_snake.png' style='width:40%;height:40%';>					</a></td>
+  </tr>  
+  <tr>
+    <td align='center'><a href='Games/DinoRun2/index.html'>					
+			<img src = 'Games/icons/david_run.png' style='width:40%;height:40%';>				</a></td>
+  </tr> 
+  <tr>
+    <td align='center'><a href='Games/flappybird/index.html'>					
+			<img src = 'Games/icons/david_bird.png' style='width:40%;height:40%';>			</a></td>
+  </tr>  
+  
+  
+  <tr>
+    <td align='center'><a href='Games/GravityBallGame/index.html'>			
+			<img src = 'Games/icons/david_ball.png' style='width:40%;height:40%';>	</a></td>
+  </tr>
+  <tr>
+    <td align='center'><a href='Games/2048/index.html'>					2048				</a></td>
+  </tr>
+  <tr>
+    <td align='center'><a href='Games/Tetris/index.html'>					Tetris				</a></td>
+  </tr>	
+
+</table>
+";
+
+ */
+ 
+ 
+ 
+ 
+
+echo"
+<table >	<tr><td align='center'>
+
+
+  <tr>	
+    <td align='center'><a href='Games/Racing/CarDriving.html'>		
+			<img src = 'Games/icons/david_race.png' style='width:40%;height:40%';>			</a></td>
+			
+			
+			
+
+    <td align='center'><a href='snake.php'>		
+			<img src = 'Games/icons/david_snake.png' style='width:40%;height:40%';>					</a></td>
+  </tr>  
+  
+  
+  
+  
+  
+  <tr>
+    <td align='center'><a href='Games/DinoRun2/index.html'>					
+			<img src = 'Games/icons/david_run.png' style='width:40%;height:40%';>				</a></td>
+
+
+    <td align='center'><a href='Games/flappybird/index.html'>					
+			<img src = 'Games/icons/david_bird.png' style='width:40%;height:40%';>			</a></td>
+  </tr>  
+  
+  
+  
+  
+  
+  <tr>
+    <td align='center'><a href='Games/GravityBallGame/index.html'>			
+			<img src = 'Games/icons/david_ball.png' style='width:40%;height:40%';>	</a></td>
+
+
+
+
+    <td align='center'><a href='Games/2048/index.html'>					
+			<img src = 'Games/icons/david_2048.png' style='width:40%;height:40%';>				</a></td>
+ </tr>
+ 
+   <tr>
+    <td align='center'><a href='Games/Tetris/index.html'>					
+			<img src = 'Games/icons/david_tetris.png' style='width:40%;height:40%';>				</a></td>
+  </tr>	
+
+
+
+</table>
+";
+
+
+
+
+
+
+
+
 	echo"<br>
 
-			  <a href='home.php'>
-					
-					
-				<img src = 'images/highscore_logo.jpg' style='width:40%;height:40%';></a>";
+			  <a href='home.php'>	
+
+				<img src = 'images/highscore_logo.jpg' style='width:40%;height:40%';>
+
+				</a>";
 //				<img src = 'images/highscore_logo.jpg' style='float:left;width:40%;height:40%';></a>";
 
 

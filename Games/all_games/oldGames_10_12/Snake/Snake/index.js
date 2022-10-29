@@ -28,8 +28,6 @@ let xVelocity = 0;
 let yVelocity = 0;
 
 let score = 0;
-let highScore = 0;
-let timesPlayed = 0;
 
 //game loop
 function drawGame() {
@@ -91,11 +89,6 @@ function isGameOver() {
     ctx.font = "50px Verdana";
 
     if (gameOver) {
-      if (score > highScore)
-      {
-        highScore = score;
-      }
-      timesPlayed++;
       ctx.fillStyle = "white";
       ctx.font = "50px Verdana";
 
@@ -110,10 +103,8 @@ function isGameOver() {
     }
 
     ctx.fillText("Game Over!", canvas.width / 6.5, canvas.height / 2);
-    canvas.reload();
   }
 
-  
   return gameOver;
 }
 

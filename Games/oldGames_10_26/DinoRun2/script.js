@@ -2,9 +2,6 @@ import { updateGround, setupGround } from "./ground.js"
 import { updateDino, setupDino, getDinoRect, setDinoLose } from "./dino.js"
 import { updateCactus, setupCactus, getCactusRects } from "./cactus.js"
 
-var highScore = 0;
-var timesPlayed = 0;
-
 const WORLD_WIDTH = 100
 const WORLD_HEIGHT = 30
 const SPEED_SCALE_INCREASE = 0.00001
@@ -75,11 +72,6 @@ function handleStart() {
 
 function handleLose() {
   setDinoLose()
-  timesPlayed++;
-  if (Math.floor(score) > highScore)
-  {
-    highScore = Math.floor(score);
-  }
   setTimeout(() => {
     document.addEventListener("keydown", handleStart, { once: true })
     startScreenElem.classList.remove("hide")
