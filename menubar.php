@@ -59,7 +59,7 @@
 	$restricted	= array('users', 'profile','your_grades');
 
 
-//if role 						include('check_role.php');
+//if role 						include('login/check_role.php');
 
 
 	$role_pages = array(/* 'faculty','users',*/ 'user_update','assigngrades','class_grades','Snake' );

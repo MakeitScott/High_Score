@@ -31,7 +31,7 @@
 
 	include('session.php');
 	include('check_login.php');
-	include('check_role.php');
+	include('login/check_role.php');
 
 
 	include('Includes/header.php');

@@ -1,7 +1,7 @@
 <?php
 /*
 ***		Written By: Scott Pietras
-*	check_role.php - check role of user Page
+*	login/check_role.php - check role of user Page
 *	
 *		check role of user
 *	

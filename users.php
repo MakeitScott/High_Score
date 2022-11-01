@@ -38,7 +38,7 @@
 	include('check_login.php');
 
 //dont check role
-//		include('check_role.php');
+//		include('login/check_role.php');
 	
 
 	include('Includes/header.php');
