@@ -54,7 +54,7 @@
 
 // restricted pages
 
-// if loging required			include('check_login.php');	
+// if loging required			include('login/check_login.php');	
 
 	$restricted	= array('users', 'profile','your_grades');
 

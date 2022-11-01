@@ -32,7 +32,7 @@
 
 
 	include('session.php');
-//	include('check_login.php');
+//	include('login/check_login.php');
 //	include('login/check_role.php');
 
 

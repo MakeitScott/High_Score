@@ -1,7 +1,7 @@
 <?php
 /*
 ***		Written By: Scott Pietras
-*	check_login.php - check login Page
+*	login/check_login.php - check login Page
 *	
 *		
 *	requires login 
