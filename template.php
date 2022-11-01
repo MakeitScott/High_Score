@@ -33,7 +33,7 @@
 // includes at the top of the page
 
 	include('session.php');
-	include('_Includes/header.php');
+	include('Includes/header.php');
 	include('menubar.php');
 
 
@@ -66,7 +66,7 @@ echo"<br><a href='Games/DinoRun2/index.html'>		Play Dino Run 2</a>";
 
 
 //include the footer
-include('_Includes/footer.php'); 
+include('Includes/footer.php'); 
 	
 //
 ?>

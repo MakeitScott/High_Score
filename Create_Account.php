@@ -36,7 +36,7 @@
 //	include('check_role.php');
 
 
-	include('_Includes/header.php');
+	include('Includes/header.php');
 	include('menubar.php');
 	
 /* 	
@@ -546,6 +546,6 @@ echo		  "</td></tr></table></form>";
 
 
 
-include('_Includes/footer.php'); 
+include('Includes/footer.php'); 
 	
 ?>

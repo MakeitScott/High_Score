@@ -39,7 +39,7 @@
 	
 
 	//output
-	include('_Includes/header.php');
+	include('Includes/header.php');
 	include('menubar.php');
 	echo "<p>
 		  <p>$user is Logged on and this is his profile";
@@ -406,6 +406,6 @@ echo"		  </table>";
 
 
 
-include('_Includes/footer.php'); 
+include('Includes/footer.php'); 
 	
 ?>

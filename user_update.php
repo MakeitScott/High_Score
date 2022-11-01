@@ -34,7 +34,7 @@
 	include('check_role.php');
 
 
-	include('_Includes/header.php');
+	include('Includes/header.php');
 	include('menubar.php');
 	
 	echo "<p>This is where Admin can modify All Users
@@ -398,6 +398,6 @@ echo"		  </table>";
 
 
 
-include('_Includes/footer.php'); 
+include('Includes/footer.php'); 
 	
 ?>

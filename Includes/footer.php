@@ -33,7 +33,7 @@
 
 //echo"<br><br>";
 
-// end the table created in the	 _include/Header
+// end the table created in the	 includes/Header
 	echo "<p align='center'> <br>
 						
 		  </td></tr></table>";

@@ -41,7 +41,7 @@
 //		include('check_role.php');
 	
 
-	include('_Includes/header.php');
+	include('Includes/header.php');
 	include('menubar.php');
 	
 	echo "<p>This is the User view Page
@@ -254,6 +254,6 @@ if($_SESSION['role'] == 'Admin'){
 
 
 
-	include('_Includes/footer.php'); 
+	include('Includes/footer.php'); 
 
 ?>

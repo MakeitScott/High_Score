@@ -7,7 +7,7 @@
 *This is the header file included on all pages text formatting and colors here
 ******* also need to include session above this for header $user and $role variables
 *	
-* 			/_Include/header.html
+* 			/Includes/header.html
 *	
 *	
 ***	
@@ -122,6 +122,8 @@ This is the H&#8593;gh Score Webpage!
 if ($role != NULL) echo ", $role"; 
 	
 /*Session is required for the role*/
+
+
 
 
 ?>

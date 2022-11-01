@@ -41,14 +41,14 @@
 	$login = False;
 	
 	
-	include('_Includes/header.php');
+	include('Includes/header.php');
 	include('menubar.php');
 	
 	
 	// log off message
 	echo "<p><center>Logoff sucessfull <br> Thanks for stopping by!</center>";
 	
-	include('_Includes/footer.php'); 
+	include('Includes/footer.php'); 
 	?>
 	
 	

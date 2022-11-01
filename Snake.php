@@ -33,7 +33,7 @@
 // includes at the top of the page
 
 	include('session.php');
-	include('_Includes/header.php');
+	include('Includes/header.php');
 	include('menubar.php');
 
 
@@ -69,7 +69,7 @@
 
 
 //include the footer
-	include('_Includes/footer.php'); 
+	include('Includes/footer.php'); 
 	
 //
 
