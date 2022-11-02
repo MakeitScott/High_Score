@@ -68,4 +68,15 @@
 
 
 
+/* class=pointer */		/* make the curser a pointer for the whole square*/
+	.pointer{
+		cursor: pointer;
+	}
+	
+	
+	/* make the buttons rounded */
+	/* class=rounded*/
+	.rounded{
+		
+	}
 
