@@ -22,15 +22,15 @@
 *	
 *	
 *	
-*	
-*	
-*	
+*	make sure all links changed
+*	 /login/login.php
+*	first slash before means home directory
 ***		
 */
 
 
 
-	// if your not logged on send to login screen and exit
+	// if your not logged in and role == admin send to login screen and exit
 	if ($role != 'Admin'){
 		header('location: login.php');
 		exit;

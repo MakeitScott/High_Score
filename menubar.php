@@ -36,17 +36,22 @@
 	$pages		= array('home' 			=> 'mediumslateblue', 
 //						'public' 		=> 'aqua', 
 						'users' 		=> 'gold', 
+
 //						'faculty'		=> 'orangered',						
 						'profile'		=> 'turquoise',
-//						'your_grades'	=>	'orangered',
+						'your_scores'	=>	'orangered',
 //						'assignments'	=> 'red',
 //						'assigngrades'	=> 'aqua',
 
-//						'class_grades'	=> 'magenta',
+						'scoreboard'	=> 'aqua',
 						'games'			=> 'magenta',
 						'Create_Account'=> 'orange',
 						'user_update'	=>	'lime',
-//						'template'		=> 'magenta',						
+//helpers						
+//						'template'		=> 'red',
+//						'admin' 		=> 'red', 
+//						'gamer' 		=> 'red', 
+						
 						'Snake'			=> 'magenta',						
 						'login' 		=> 'plum'	);
 
@@ -56,13 +61,13 @@
 
 // if login required			include('login/check_login.php');	
 
-	$restricted	= array('users', 'profile','your_grades');
+	$restricted	= array('gamer','users','profile','your_scores');
 
 
 //if role 						include('login/check_role.php');
 
 
-	$role_pages = array(/* 'faculty','users',*/ 'user_update','assigngrades','class_grades','Snake' );
+	$role_pages = array(/* 'faculty','users',*/ 'admin','user_update','assigngrades','Snake' );
 	$role_value = 'Admin'; 
 
 //hide if logged in

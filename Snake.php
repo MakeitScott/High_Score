@@ -41,14 +41,58 @@
 
 
 
+/* //car driving
+$name = 'car driving';
+$location ='Games/Racing/CarDriving.html';
+*/
+ 
+/* // 2048
+$name = '2048';
+$location ='Games/2048/index.html';
+*/
+ 
+/* //DinoRun
+$name = 'DinoRun';
+$location ='Games/DinoRun2/index.html';
+*/
+
+
+//GravityBall
+$name = 'GravityBall';
+$location ='Games/GravityBall/index.html';
+
+
+/* //racing
+$name = 'racing';
+$location ='Games/Racing/CarDriving.html';
+ */
+
+/* //snake
+$name = "snake";
+$location ='Games/Snake/index.html'; 
+*/
+
+/* // tetris
+$name = 'tetris';
+$location ='Games/Tetris/index.html';
+ */
+
+
+
 //show snake game in its own window
 
 //works
 	//echo"<iframe src='Games/Racing/CarDriving.html' style='height:700px;width:700px;' title='Play car racing'></iframe>";
-	echo"<iframe src='Games/Snake/index.html' style='height:550px;width:450px;border:none;' title='the game snake'></iframe>";
+	
+//	echo"<iframe src='Games/Snake/index.html' style='height:550px;width:450px;border:none;' title='the game snake'></iframe>";
+
+
+// using variables above
+	echo"<iframe src= $location style='height:550px;width:450px;border:none;' title= $name ></iframe>";
 	
 	
 //	echo"<iframe src='Games/Gravity_Ball_Game/index.html' style='height:700px;width:700px;' title='the game snake'></iframe>";
+
 	//echo"<iframe src='Games/flappybird/index.html' style='height:500px;width:600px;' title='the game snake'></iframe>";
 	
 
@@ -71,8 +115,5 @@
 //include the footer
 	include('Includes/footer.php'); 
 	
-//
-
-
 
 ?>

@@ -60,6 +60,26 @@ echo"<br><a href='Games/DinoRun2/index.html'>		Play Dino Run 2</a>";
 
 
 
+echo "<br><br><br>";
+$uri = $_SERVER['REQUEST_URI'];
+echo $uri; // Outputs: URI
+echo "<br><br><br>";
+
+
+echo "<br><br>Outputs: URI<br>";
+$uri = $_SERVER['REQUEST_URI'];
+echo $uri; // Outputs: URI
+
+ echo "<br><br>Outputs: Full URL<br>";
+$protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+ 
+$url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+echo $url; // Outputs: Full URL
+
+ echo "<br><br>Outputs: Query String<br>";
+$query = $_SERVER['QUERY_STRING'];
+echo $query; // Outputs: Query String
+
 
 
 

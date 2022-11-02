@@ -1,7 +1,33 @@
 <?php
-// 
-//requires login 
-// Written by: 
+/*
+***		Written By: Scott Pietras
+*	your_scores.php - view your game scores Page
+*	
+*		
+*	
+*	
+*	alert so that admin can not go to page they wont have game scores
+*	
+*	
+*	
+***		
+*/
+
+
+/*
+***		Backlog ::todo
+*	
+*	
+*	
+*	
+*	
+*	
+*	
+*	
+*	
+***		
+*/
+
 
 
 // Output
@@ -12,20 +38,20 @@
 	
 
 	//output
-	include('header.php');
+	include('Includes/header.php');
 	include('menubar.php');
 	
 	
 	
 		if ($role == 'Admin'){
 			echo "<script >
-       window.onload = function () { alert('you are an $role you dont have grades');
+       window.onload = function () { alert('you are an $role you dont play games busniess only');
 	  window.location = 'home.php'; } 
 </script>"; 
 		}
 		
 			echo "<p>
-		  <p>$user is Logged on and these are their grades";
+		  <p>$user is Logged on and these are their game scores";
 
 
 
@@ -52,7 +78,7 @@ print_r($_SESSION);
 //	$pgm		= 'profile.php'; 
 //	$pgm2		= 'admin_roster.php'; 
 	
-	$table		= 'finalpeople'; 
+	$table		= 'userinfo'; 
 	
 	$bold		= "style='font-weight:bold;'";
 	$center		= "align='center'";
@@ -61,7 +87,7 @@ print_r($_SESSION);
 							
 	$msg		= NULL;
 	$msg_color	= 'black';
-	$columns	= array('rowid', 'fname', 'lname', 'role', 'email', 'userid', 'password');
+//	$columns	= array('rowid', 'fname', 'lname', 'role', 'email', 'userid', 'password');
 	$photo		= null;
 	
 	
@@ -72,15 +98,18 @@ print_r($_SESSION);
 
 
 
+	$query = "SELECT  gameinfo.title,scoreinfo.highscore, scoreinfo.timesplayed, userinfo.firstname, userinfo.lastname
+	FROM scoreinfo
+
+	JOIN gameinfo ON gameinfo.rowid = scoreinfo.game
+	JOIN userinfo ON userinfo.rowid = scoreinfo.user
+
+		WHERE userinfo.rowid = '$seshuserid'
+	ORDER BY scoreinfo.highscore;";
 
 
 
-
-
-
-
-		  
-		  
+/* 
 	$query = "SELECT assignment.assignmentname, assignment.duedate,
 				finalgrades.grade, finalpeople.photo
 				
@@ -90,7 +119,7 @@ print_r($_SESSION);
 
 			  WHERE finalgrades.student = '$seshuserid'
 			  ORDER BY assignment.duedate";
-
+ */
 
 
 
@@ -104,12 +133,14 @@ print_r($_SESSION);
 	// Output
 	
 		// output
+		echo "<h3>Your Scores</h3>";
 		echo "
 		  <p><table width='1024' align='center'	rules='all' frame='border' cellpadding='5'>
 		  <tr>
-		  <th align='left'>Assignment</th>
-		  <th align='left'>Due Date</th>
-		  <th align='left'>Grade</th>
+		  <th align='left'>Game</th>
+		  <th align='left'>Score</th>
+		  <th align='left'>Times played</th>
+		  <th align='left'>score date</th>
 		  </tr>";
 		  
 		  
@@ -119,17 +150,21 @@ print_r($_SESSION);
 	else {	  
 	
 	//get first name and lastname  and display them 
-	while(list( $assignmentname, $duedate,$grade, $photo) = mysqli_fetch_row($result)) {
-		echo "<!DOCTYPE HTML><html><body>
+	while(list( $title, $score,$timesplayed, $scoredate) = mysqli_fetch_row($result)) {
+		
+//		echo "<!DOCTYPE HTML><html><body>
 			
-		  <div $bold><img src = '$photo' width = '100'><br>
-							<br>Your grades</div>\n";
+//echo "		  <div $bold><img src = '$photo' width = '100'><br>
+//					echo "<br>Your Scores</div>\n";
+
+					
 		
 		
 		echo "<tr>
-			  <td>$assignmentname</td>
-			  <td>$duedate</td>
-			  <td>$grade</td>
+			  <td>$title</td>
+			  <td>$score</td>
+			  <td>$timesplayed</td>
+			  <td>$scoredate</td>
 			  </tr>";
 		}
 	}
@@ -167,6 +202,6 @@ print_r($_SESSION);
 
 
 
-	include('footer.php');
+include('Includes/footer.php'); 
 	
 ?>
