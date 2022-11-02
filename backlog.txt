@@ -20,14 +20,29 @@
 *	
 *	
 *	
-*	dont display the password in admin 
+*	dont display the password in admin ***
 *	have a way to reset the password to a default 
 		get first and last name and insert like f_n_1234
+		need trigger to make default password
+		need trigger for admin to reset password
 *	
-*	have a way for users to change their first and las name
+*	have a way for users to change their first and las name if they get married?
 *	
 ***		
 */
+
+
+
+
+
+11/1
+
+change racing game file structure  make index.html
+
+add some css to buttons   style= "cursor:pointer"
+
+continue moving files to folders heres help
+https://www.yourhtmlsource.com/myfirstsite/basiclinks.html
 
 
 
