@@ -18,10 +18,10 @@
 ***		Backlog ::todo
 *	
 *	
+*	move to login folder 
+*	change includes to match
 *	
-*	
-*	
-*	
+*	string replace key in menubar so that file location is not shown
 *	
 *	
 *	

@@ -54,7 +54,7 @@
 
 // restricted pages
 
-// if loging required			include('login/check_login.php');	
+// if login required			include('login/check_login.php');	
 
 	$restricted	= array('users', 'profile','your_grades');
 
@@ -93,6 +93,9 @@
 		 */
 		 
 	//	::todo			 a function that removes the underscore in the filename for the title 
+	//change  str_replace() to cleanstring($name)
+
+	// links to the $key but only will show 
 			echo "<td><a href='$key.php'>
 			  <button style='background-color:$value; font-weight:bold;'>" . str_replace("_"," ",ucfirst("$key")) . "</button>
 			  </a></td>\n";
@@ -112,4 +115,27 @@
 		
 		// end the menu bar table and <p> for a space under the menubar
 	echo "</tr></table><p>"; 
+	
+	
+//Functions		//	::todo
+
+//function to remove filepaths from array key
+function cleanstring($name) {
+//change underscore to space
+$name = str_replace("_"," ","$name");
+//remove include/ fileplath
+$name = str_replace("include/","","$name");
+//remove login/	fileplath
+$name = str_replace("login/","","$name");
+//	str_replace("incluide/"," ",str_replace("_"," ",$key));
+//how to string concat
+// $name = $name . " " . $name;
+
+//return value
+ return $name;
+}
+
+
+
+	
 ?>

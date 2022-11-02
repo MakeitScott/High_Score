@@ -25,6 +25,11 @@
 *	
 *	
 *	change message variable to show in a popup like on the home page
+
+
+*	when this goes into a folder make sure all links changed
+*	 /login/login.php
+*	first slash before means home directory
 ***		
 */
 
