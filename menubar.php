@@ -48,7 +48,7 @@
 						'Create_Account'=> 'orange',
 						'user_update'	=>	'lime',
 //helpers						
-//						'template'		=> 'red',
+						'/temp/template'		=> 'red',
 //						'admin' 		=> 'red', 
 //						'gamer' 		=> 'red', 
 						
@@ -129,9 +129,11 @@ function cleanstring($name) {
 //change underscore to space
 $name = str_replace("_"," ","$name");
 //remove include/ fileplath
-$name = str_replace("include/","","$name");
+$name = str_replace("/include/","","$name");
 //remove login/	fileplath
-$name = str_replace("login/","","$name");
+$name = str_replace("/login/","","$name");
+//remove temp/	fileplath
+$name = str_replace("/temp/","","$name");
 //	str_replace("incluide/"," ",str_replace("_"," ",$key));
 //how to string concat
 // $name = $name . " " . $name;

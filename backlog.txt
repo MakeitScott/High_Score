@@ -32,7 +32,13 @@
 */
 
 
+fix bug on user profile page
 
+
+in order to reset password make an input type submit button or link
+querry would be select fname , lname 
+
+ insert INTO userinfo password values(fnamelname1234)
 
 
 11/1
