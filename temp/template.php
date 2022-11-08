@@ -19,7 +19,7 @@
 *	
 *	
 *	
-*	
+*	this works but there is no formatting. background. colors..
 *	
 *	
 *	
@@ -32,9 +32,9 @@
 
 // includes at the top of the page
 
-	include('session.php');
-	include('Includes/header.php');
-	include('menubar.php');
+	include('../session.php');
+	include('../Includes/header.php');
+	include('../menubar.php');
 
 
 // Output
@@ -86,7 +86,7 @@ echo $query; // Outputs: Query String
 
 
 //include the footer
-include('Includes/footer.php'); 
+include('../Includes/footer.php'); 
 	
 //
 ?>

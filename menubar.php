@@ -48,9 +48,11 @@
 						'Create_Account'=> 'orange',
 						'user_update'	=>	'lime',
 //helpers						
-						'/temp/template'		=> 'red',
+						'./temp/template'		=> 'red',// temp in temp folder
+//						'template'		=> 'red',		//temp in source folder
 //						'admin' 		=> 'red', 
 //						'gamer' 		=> 'red', 
+						'assignscores' 		=> 'red', 		
 						
 						'Snake'			=> 'magenta',						
 						'login' 		=> 'plum'	);
@@ -67,7 +69,7 @@
 //if role 						include('login/check_role.php');
 
 
-	$role_pages = array(/* 'faculty','users',*/ 'admin','user_update','assigngrades','Snake' );
+	$role_pages = array(/* 'faculty','users',*/ 'admin','user_update','assignscores','Snake' );
 	$role_value = 'Admin'; 
 
 //hide if logged in
@@ -122,6 +124,9 @@
 	echo "</tr></table><p>"; 
 	
 	
+	
+	
+	
 //Functions		//	::todo
 
 //function to remove filepaths from array key
@@ -134,13 +139,21 @@ $name = str_replace("/include/","","$name");
 $name = str_replace("/login/","","$name");
 //remove temp/	fileplath
 $name = str_replace("/temp/","","$name");
+// capatal letter
+ucfirst("$name");
+//remove temp/	fileplath  change this
+$name = str_replace("../temp/","","$name");
+
+
+
+
 //	str_replace("incluide/"," ",str_replace("_"," ",$key));
 //how to string concat
 // $name = $name . " " . $name;
 
 //return value
  return $name;
-}
+}// end clean string function
 
 
 
