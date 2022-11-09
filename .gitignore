@@ -1,0 +1,11 @@
+# git ignore for senior project
+
+
+#this is a comment
+
+helpLinks.txt
+
+#backlog.txt
+
+
+#*.mp3
