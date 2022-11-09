@@ -90,15 +90,11 @@ print_r($_SESSION);
 //	$columns	= array('rowid', 'fname', 'lname', 'role', 'email', 'userid', 'password');
 	$photo		= null;
 	
-	
 
 
 
 
-
-
-
-	$query = "SELECT  gameinfo.title,scoreinfo.highscore, scoreinfo.timesplayed, userinfo.firstname, userinfo.lastname
+	$query = "SELECT  gameinfo.title, scoreinfo.highscore, scoreinfo.timesplayed, scoreinfo.scoredate
 	FROM scoreinfo
 
 	JOIN gameinfo ON gameinfo.rowid = scoreinfo.game
@@ -135,27 +131,33 @@ print_r($_SESSION);
 		// output
 		echo "<h3>Your Scores</h3>";
 		echo "
-		  <p><table width='1024' align='center'	rules='all' frame='border' cellpadding='5'>
+		  <p><table width='800' align='center'	rules='all' frame='border' cellpadding='5'>
 		  <tr>
 		  <th align='left'>Game</th>
 		  <th align='left'>Score</th>
 		  <th align='left'>Times played</th>
-		  <th align='left'>score date</th>
+		  <th align='left'>Score Date</th>
 		  </tr>";
 		  
 		  
 		  
-	if (($result->num_rows) == 0)
+	if (($result->num_rows) == 0){
 		echo "<tr><td>None Found</td></tr>";
+//alert if you dont have any scores send to game page
+echo "<script >
+       window.onload = function () { alert('You dont have any HighScores saved play games to get scores');
+	  window.location = 'games.php'; } 
+</script>";
+	}
+		
 	else {	  
 	
 	//get first name and lastname  and display them 
 	while(list( $title, $score,$timesplayed, $scoredate) = mysqli_fetch_row($result)) {
 		
-//		echo "<!DOCTYPE HTML><html><body>
 			
 //echo "		  <div $bold><img src = '$photo' width = '100'><br>
-//					echo "<br>Your Scores</div>\n";
+
 
 					
 		
