@@ -18,12 +18,12 @@
 ***		Backlog ::todo
 *	
 *	
+*	doesent check to see if information is blank
 *	
 *	
-*	
-*	
-*	
-*	
+*	needs to check if the user already has a high score for that game
+*	if score for game and user > 0 
+*	update values
 *	
 ***		
 */
@@ -42,7 +42,7 @@
 	
 	
 	echo "<p>
-		  <p>$user is $role and can add grades to students";
+		  <p>$user is $role and can add scores to gamers";
 
 
 // Variables
@@ -55,28 +55,42 @@
 
 
 // Get Form Input 
-	if (isset($_POST['grade']))  		$grade 				= $_POST['grade'];			else $grade			= NULL;
-	if (isset($_POST['student'])) 		$student 			= $_POST['student'];		else $student		= NULL;
-	if (isset($_POST['assignment']))  	$assignment 		= $_POST['assignment'];		else $assignment	= NULL;	
+	if (isset($_POST['highscore']))  		$highscore 				= $_POST['highscore'];			else $highscore			= NULL;
+	if (isset($_POST['timesplayed']))  		$timesplayed 			= $_POST['timesplayed'];		else $timesplayed		= NULL;
+	if (isset($_POST['gamer'])) 			$gamer 					= $_POST['gamer'];				else $gamer				= NULL;
+	if (isset($_POST['game']))  			$game 					= $_POST['game'];				else $game				= NULL;	
 
 // if nothing is selected 
-	if ($student == 'Select')			$student		= NULL;
-	if ($assignment == 'Select')		$assignment		= NULL;
+	if ($gamer == 'Select')		$gamer		= NULL;
+	if ($game == 'Select')		$game		= NULL;
+	
+	
+// doesnt check
+// Text Fields
+		if ($gamer == NULL) $msg .= 'the gamer needs to be selected<br>';
+		if ($game == NULL) $msg .= 'game was not selected<br>';
+		if ($highscore  == NULL) $msg .= 'highscore is missing<br>';
+		if ($timesplayed  == NULL) $msg .= 'numbner of times played is missing<br>';
+
 
 
 // Process Input
-	if (($assignment == NULL) OR ($student == NULL))	
+	if (($game == NULL) OR ($gamer == NULL))	
 		// if one or both are not selected make the message
-		$msg = "Select Student and Assignment and press SUBMIT";
+		$msg = "Select gamer, game, enter highscore and<br> number times played and press SUBMIT";
+		
+		
+		
 	else {
-		$query = "INSERT INTO finalgrades SET
-				  student 		= '$student', 
-				  assignment 	= '$assignment',
-				  grade			= '$grade'"; 
+		$query = "INSERT INTO scoreinfo SET
+				  user 			= 	'$gamer', 
+				  game 			= 	'$game',
+				  highscore		= 	$highscore,
+				  timesplayed	= 	$timesplayed"; 
 		$result = mysqli_query($mysqli, $query);
-		if ($result) $msg = "Student grade successfully entered";
+		if ($result) $msg = "Gamer highscore successfully entered";
 		else echo "Query Failed [$query]: " . mysqli_error($mysqli);	
-		}
+	}
 
 
 
@@ -88,20 +102,20 @@
 		  <table   align='center'>";
 //width='1024'
 
-// Student Dropdown 		  
+// gamer Dropdown 		  
 	echo "<br><br>
-	<tr><td width='100'>Student</td>
-		  <td><select name='student'><option>Select</option>";
+	<tr><td width='100'>Gamer</td>
+		  <td><select name='gamer'><option>Select</option>";
 
 
-// Student Dropdown query			  
-	$query = "SELECT rowid, firstname, lastname FROM finalpeople WHERE role ='student' ORDER BY firstname, lastname";
+// gamer Dropdown query			  
+	$query = "SELECT rowid, firstname, lastname FROM userinfo WHERE role ='Gamer' ORDER BY firstname, lastname";
 	$result = mysqli_query($mysqli, $query);
 	if (!$result) echo "Query Failed [$query]: " . mysqli_error($mysqli);	
 	while (list($rowid, $firstname, $lastname) = mysqli_fetch_row($result)) {
-		if ($rowid == $student) $se = "SELECTED"; else $se = NULL;
+		if ($rowid == $gamer) $se = "SELECTED"; else $se = NULL;
 		
-		//value is the row but show the student firstname and last name 
+		//value is the row but show the gamer firstname and last name 
 		echo "<option value='$rowid' $se>$firstname $lastname</option>\n";
 		}	
 	echo "</select></td></tr>";
@@ -109,33 +123,40 @@
 	
 	
 	
-// assignment Dropdown
-	echo "<tr><td width='100'>Assignment</td>
-		  <td><select name='assignment'><option>Select</option>";
-		  
-// assignment Dropdown query
-	$query = "SELECT rowid, assignmentname, duedate FROM assignment ORDER BY duedate";
+// game Dropdown
+	echo "<tr><td width='100'>Game</td>
+		  <td><select name='game' ><option>Select</option>";
+
+// game Dropdown query
+	$query = "SELECT rowid, title FROM gameinfo ";
 	$result = mysqli_query($mysqli, $query);
 	if (!$result) echo "Query Failed [$query]: " . mysqli_error($mysqli);	
-	while (list($rowid, $assignmentname, $duedate) = mysqli_fetch_row($result)) {
-		if ($rowid == $assignment) $se = "SELECTED"; else $se = NULL;
-		
-		
-		
-//value is the row id  show the assignmentname and duedate
-		echo "<option value='$rowid' $se>$assignmentname - $duedate</option>\n";
+	while (list($rowid, $title) = mysqli_fetch_row($result)) {
+		if ($rowid == $game) $se = "SELECTED"; else $se = NULL;
+
+
+
+//value is the row id  show the title
+		echo "<option value='$rowid' $se>$title</option>\n";
 		}	
 			echo "</select></td></tr>";
-		
-		//score
-		
-//add input for grade
-		echo"<tr><td>Grade</td>
-			  <td><input type='text'	 name='grade'  value='$grade' size='15'></td></tr>";
-			  
+
+
+//add input for highscore
+		echo"<tr><td>Highscore</td>
+			  <td><input type='number'	 name='highscore'  value='$highscore' size='15' required></td></tr>";
+
+
+//add input for times played
+		echo"<tr><td>Number of times played</td>
+			  <td><input type='number'	 name='timesplayed'  value='$timesplayed' size='15' required></td></tr>";
+
+
+
+
 //button to submit		
 	echo "
-		  <tr><td><input type='submit' name='submit' value='Submit'></td></tr>
+		  <tr><td></td><td align = 'center'><input type='submit' name='submit' value='Submit'></td></tr>
 		  
 		  </table></form>";
 
@@ -144,11 +165,9 @@
 //probally dont need
 //</select></td></tr>
 
-// move submit button to next column
-//</td><td>
 
 
 // Message
-	echo "<p><table  align='center'><tr><td align='left'>MESSAGE: $msg</td></tr></table>";
-	//	width='1024'
+	echo "<p><table  align='center'><tr><td align='left'>MESSAGE: </td><td> $msg</td></tr></table>";
+
 ?>
