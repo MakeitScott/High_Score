@@ -3,7 +3,15 @@
 
 #this is a comment
 
+
+#ignore this file
 helpLinks.txt
+
+#ignore all files in sql tables folder
+sql tables/
+
+
+sql tables/gameinfo.sql
 
 #backlog.txt
 

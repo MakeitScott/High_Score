@@ -76,11 +76,11 @@ require('mysqli_connect.php');
 
 
 // Get Input Catagory
-	if(isset ($_POST['ctgy'])) $ctgy = $_POST['ctgy']; else $ctgy = NULL;
+	if(isset ($_POST['ctgy']))		$ctgy = $_POST['ctgy']; 	else $ctgy = NULL;
 	if ($ctgy == 'All')  $ctgy = NULL;
 	
 // Get Input Sort	
-	if(isset ($_POST['sort'])) $sort = $_POST['sort']; else $sort = 'lastname';
+	if(isset ($_POST['sort'])) 		$sort = $_POST['sort']; 	else $sort = 'lastname';
 	if ($sort == 'Select') $sort = NULL;
 	
 /* // Process Input  og
@@ -250,6 +250,8 @@ if($_SESSION['role'] == 'Admin'){
 // End of Program
 	echo "</table>";
 //		  </body></html>";
+
+
 	mysqli_close($mysqli);
 
 

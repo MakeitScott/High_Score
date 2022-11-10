@@ -16,17 +16,22 @@
 
 /*
 ***		Backlog ::todo
-*	
+*	use for each loop and aarry of game titles
 *	
 *		add filters
 *	
-*	
-*	
-*	
+*	leaderboard
+*	first you need to select 1 top high score from each game
+*	then group 
 *	
 *	
 ***		
 */
+
+
+
+
+
 
 
 
@@ -163,9 +168,42 @@ $message= null;
 			  ORDER BY assignment.duedate";
 
  */
+ 
+ //try this 
+/*  
+// all game titles from 
+	//$titles				= array ('Snake', 'Dino Run 2', 'Flappy Bird', 'Gravity Ball', '2048', 'Racing', 'Tetris');
+	$titles				= array (1, 2, 3, 4, 5, 6, 7);
+	
+	foreach($titles as $value){
+	$query = "SELECT  userinfo.firstname, userinfo.lastname, userinfo.userid, gameinfo.title,
+							scoreinfo.highscore, scoreinfo.scoredate, scoreinfo.timesplayed
+	FROM scoreinfo
+
+	JOIN gameinfo ON gameinfo.rowid = scoreinfo.game
+	JOIN userinfo ON userinfo.rowid = scoreinfo.user
+
+	WHERE gameinfo.rowid = $value
+	ORDER BY scoreinfo.highscore DESC
+	limit 1";
 
 
-// querry to get all the information
+
+
+// Execute the Query
+	$result = mysqli_query($mysqli, $query);
+	if (!$result) echo "Query Failed [$query]: " . mysqli_error($mysqli);
+	}
+
+ */
+
+
+
+
+// this  works shows everything
+
+
+// querry to get all the information where role == gamer
 
 	$query = "SELECT  userinfo.firstname, userinfo.lastname, userinfo.userid, gameinfo.title,
 							scoreinfo.highscore, scoreinfo.scoredate, scoreinfo.timesplayed
@@ -174,6 +212,7 @@ $message= null;
 	JOIN gameinfo ON gameinfo.rowid = scoreinfo.game
 	JOIN userinfo ON userinfo.rowid = scoreinfo.user
 
+	WHERE userinfo.role = 'gamer'
 
 	ORDER BY scoreinfo.highscore DESC;";
 
@@ -185,11 +224,11 @@ $message= null;
 	if (!$result) echo "Query Failed [$query]: " . mysqli_error($mysqli);
 	
 	
-	
+
 	
 		// output
 		echo "
-		  <p><table width='1024' align='center'>
+		  <p><table width='800' align='center'>
 		  <tr>
 		  <th align='left'>Name</th>
 		  <th align='left'>UserID</th>

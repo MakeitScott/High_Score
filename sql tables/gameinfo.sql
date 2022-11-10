@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 26, 2022 at 05:26 AM
+-- Generation Time: Nov 10, 2022 at 02:48 AM
 -- Server version: 5.7.36
 -- PHP Version: 7.4.26
 
@@ -40,14 +40,21 @@ CREATE TABLE IF NOT EXISTS `gameinfo` (
   `updated` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `deleted` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`rowid`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `gameinfo`
 --
 
 INSERT INTO `gameinfo` (`rowid`, `title`, `location`, `image`, `created`, `updated`, `deleted`) VALUES
-(1, 'Snake', 'Games/Snake/.index.html', NULL, '2022-10-26 01:05:17', '2022-10-26 01:16:45', 0);
+(1, 'Snake', 'Games/Snake/.index.html', NULL, '2022-10-26 01:05:17', '2022-10-26 01:16:45', 0),
+(2, 'Dino Run 2', 'Games/DinoRun2/index.html', NULL, '2022-11-01 11:00:46', '2022-11-01 11:00:46', 0),
+(3, 'Flappy Bird', 'Games/flappybird/index.html', NULL, '2022-11-01 11:00:46', '2022-11-01 11:00:46', 0),
+(4, 'Gravity Ball', 'Games/GravityBall/index.html', NULL, '2022-11-01 11:00:46', '2022-11-01 11:00:46', 0),
+(5, '2048', 'Games/2048/index.html', NULL, '2022-11-01 11:00:46', '2022-11-01 11:00:46', 0),
+(6, 'Racing', 'Games/Racing/cardriving.html', NULL, '2022-11-01 11:00:46', '2022-11-01 11:00:46', 0),
+(7, 'Tetris', 'Games/GravityBall/index.html', NULL, '2022-11-01 11:00:46', '2022-11-01 11:00:46', 0);
+
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -20,11 +20,11 @@
 *	 add a picture
 *	add validation for username
 *	
+*	add a way for users to change their first and last name
 *	
+*	add a function ton confirm if you want to chamge your name
 *	
-*	
-*	
-*	
+*	add photo in $columns
 ***		
 */
 
@@ -74,10 +74,11 @@ print_r($_SESSION);
 							
 	$msg		= NULL;
 	$msg_color	= 'black';
+// if i add photo into this do this help me out ??
 	$columns	= array('rowid', 'fname', 'lname', 'role', 'email', 'userid', 'password');
 	$photo		= null;
 	
-	
+	// add session variables
 
 
 // Get Input
@@ -120,6 +121,7 @@ print_r($_SESSION);
 	}
 
 
+
 // Verify the Email is unique
 			$query = "SELECT userid
 					  FROM $table 
@@ -135,7 +137,7 @@ print_r($_SESSION);
 
 */
 
-
+// if ($_SESSION['userid'] != userid)
 
 
 /*::todo 	//varify the userid is unique  
@@ -237,7 +239,9 @@ but if i have the change the picture doesnt update
 ***		
 */
 
-//				  
+//				  if email == email and if
+//							username == sesh userid 
+//							if 
 
 $query = "UPDATE $table SET
 				  email				= '$email',

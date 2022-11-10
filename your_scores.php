@@ -105,19 +105,6 @@ print_r($_SESSION);
 
 
 
-/* 
-	$query = "SELECT assignment.assignmentname, assignment.duedate,
-				finalgrades.grade, finalpeople.photo
-				
-			  FROM finalgrades
-			  JOIN assignment ON assignment.rowid = finalgrades.assignment
-			  join finalpeople on finalpeople.rowid = finalgrades.student
-
-			  WHERE finalgrades.student = '$seshuserid'
-			  ORDER BY assignment.duedate";
- */
-
-
 
 
 // Execute the Query
@@ -185,7 +172,9 @@ echo "<script >
 		  </tr></table>"; 
 		  
 // End of Program
-	echo "</body></html>";
+//	echo "</body></html>";
+	
+	
 	mysqli_close($mysqli);
 	
 	

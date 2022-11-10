@@ -44,7 +44,6 @@
 // Output
 
 	//start the document
-echo "<!doctype HTML><html>";
 
 
 

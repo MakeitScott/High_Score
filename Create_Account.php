@@ -16,12 +16,12 @@
 
 /*
 ***		Backlog ::todo
-*	creat an account then send you to the log in page		done
+*	creat an account then send you to the log in page		::YES
 *	
 *	have alert / confirm message before sending you	:	yes but	the message pops up before the account is validated 
 *	
 *	
-*	*	change from "Gamer" to "user" or Gamer
+*	*	change from "Gamer" to "user" or Gamer	::YES
 *				change rest of database selec
 *	hide this in menubar if you are loged in 
 *	

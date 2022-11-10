@@ -20,7 +20,7 @@
 *	
 *	
 *	
-*	
+*	need to add session variables into login page to set the session variables like email to make sure theyre unique
 *	
 *	
 *	
@@ -40,6 +40,7 @@
 		$role = $_SESSION['role'];
 		$seshuserid = $_SESSION['rowid'];
 		//$time = $_SESSION['time'];
+		
 		}
 	
 	else {

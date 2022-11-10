@@ -48,7 +48,7 @@
 						'Create_Account'=> 'orange',
 						'user_update'	=>	'lime',
 //helpers						
-						'./temp/template'		=> 'red',// temp in temp folder
+//						'./temp/template'		=> 'red',// temp in temp folder
 //						'template'		=> 'red',		//temp in source folder
 //						'admin' 		=> 'red', 
 //						'gamer' 		=> 'red', 
