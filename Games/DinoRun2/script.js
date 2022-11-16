@@ -80,6 +80,8 @@ function handleLose() {
   {
     highScore = Math.floor(score);
   }
+  document.getElementById("highScore").innerHTML = highScore;
+  document.getElementById("timesPlayed").innerHTML = timesPlayed;
   setTimeout(() => {
     document.addEventListener("keydown", handleStart, { once: true })
     startScreenElem.classList.remove("hide")

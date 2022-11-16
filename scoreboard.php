@@ -169,7 +169,8 @@ $message= null;
 
  */
  
- //try this 
+//try this 
+
 /*  
 // all game titles from 
 	//$titles				= array ('Snake', 'Dino Run 2', 'Flappy Bird', 'Gravity Ball', '2048', 'Racing', 'Tetris');
@@ -183,7 +184,9 @@ $message= null;
 	JOIN gameinfo ON gameinfo.rowid = scoreinfo.game
 	JOIN userinfo ON userinfo.rowid = scoreinfo.user
 
-	WHERE gameinfo.rowid = $value
+//	WHERE gameinfo.rowid = $value
+	WHERE scoreinfo.game = $value
+	
 	ORDER BY scoreinfo.highscore DESC
 	limit 1";
 
@@ -215,9 +218,6 @@ $message= null;
 	WHERE userinfo.role = 'gamer'
 
 	ORDER BY scoreinfo.highscore DESC;";
-
-
-
 
 // Execute the Query
 	$result = mysqli_query($mysqli, $query);
