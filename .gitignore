@@ -1,6 +1,18 @@
 # git ignore for senior project
 
 
+#
+#To stop tracking a file that is currently tracked, use 
+#		git rm --cached 
+#
+#
+#
+#
+#
+
+
+
+
 #this is a comment
 
 
