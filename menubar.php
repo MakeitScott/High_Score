@@ -104,7 +104,7 @@
 
 	// links to the $key but only will show 
 			echo "<td><a href='$key.php'>
-			  <button style='background-color:$value; font-weight:bold;'>" . str_replace("_"," ",ucfirst("$key")) . "</button>
+			  <button class='scott'; style='background-color:$value; font-weight:bold;'>" . str_replace("_"," ",ucfirst("$key")) . "</button>
 			  </a></td>\n";
 		}// end for each 
 		

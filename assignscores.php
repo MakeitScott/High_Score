@@ -140,6 +140,13 @@
 		echo "<option value='$rowid' $se>$title</option>\n";
 		}	
 			echo "</select></td></tr>";
+			
+//game value for 1 game
+	//echo"<input type='hidden' id='game' name='game' value='1'>";
+	
+//gamer
+	//echo"<input type='hidden' id='gamer' name='gamer' value='$seshuserid'>";
+
 
 
 //add input for highscore

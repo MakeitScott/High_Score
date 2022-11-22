@@ -133,68 +133,29 @@ echo"
 
  */
  
- 
- 
 
-/* 
 echo"
 <table >	<tr><td align='center'>
 
 <tr>	
-    <td align='center'><a href='Games/Racing/CarDriving.html'>	<img src = 'Games/icons/david_race.jpg' 	style='width:200;height:200';>			</a></td>
-			
+    
+	
+	<td align='center'><a href='Games/flappybird/index.html'>	<img src = 'Games/icons/david_bird.jpg' 	style='width:200;height:200';>	
+	</a></td>		
+	
     <td align='center'><a href='snake.php'>						<img src = 'Games/icons/david_snake.jpg' 	style='width:200;height:200';>			</a></td>
 </tr>  
 
 
 
 
-<tr>
+<tr> 
+
+<td align='center'><a href='Games/Racing/CarDriving.html'>	<img src = 'Games/icons/david_race.jpg' 	style='width:200;height:200';>			</a></td>
     <td align='center'><a href='Games/DinoRun2/index.html'>		<img src = 'Games/icons/david_run.jpg' 		style='width:200;height:200';>			</a></td>
 
-    <td align='center'><a href='Games/flappybird/index.html'>	<img src = 'Games/icons/david_bird.jpg' 	style='width:200;height:200';>			</a></td>
-</tr>  
-
-
-
-
-<tr>
-	<td align='center'><a href='Games/GravityBall/index.html'>	<img src = 'Games/icons/david_ball.jpg' 	style='width:200;height:200';>			</a></td>
- 
-	<td align='center'><a href='Games/2048/index.html'>			<img src = 'Games/icons/david_2048.jpg' 	style='width:200;height:200';>			</a></td>
-</tr>
-
-
-
-
-<tr>
-	<td align='center'><a href='Games/Tetris/index.html'>		<img src = 'Games/icons/david_tetris.jpg' 	style='width:200;height:200';>			</a></td>
-
-	<td align='center'><a href='Games/Simon/index.html'>		<img src = 'Games/icons/david_simon.jpg' 	style='width:200;height:200';>			</a></td>
-</tr>	
-
-
-
-</table>";
-
-
- */
-echo"
-<table >	<tr><td align='center'>
-
-<tr>	
-    <td align='center'><a href='Games/Racing/CarDriving.html'>	<img src = 'Games/icons/david_race.jpg' 	style='width:200;height:200';>			</a></td>
-			
-    <td align='center'><a href='snake.php'>						<img src = 'Games/icons/david_snake.jpg' 	style='width:200;height:200';>			</a></td>
-</tr>  
-
-
-
-
-<tr>
-    <td align='center'><a href='Games/DinoRun2/index.html'>		<img src = 'Games/icons/david_run.jpg' 		style='width:200;height:200';>			</a></td>
-
-    <td align='center'><a href='Games/flappybird/index.html'>	<img src = 'Games/icons/david_bird.jpg' 	style='width:200;height:200';>			</a></td>
+   
+	
 </tr>  
 
 

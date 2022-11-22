@@ -54,11 +54,11 @@
 		  background-color: transparent;
 		  text-decoration: none;
 	}
-	a:hover {
+ 	a:hover {
 		  color: #00FF00;
 		  background-color: transparent;
 		  text-decoration: underline;
-	}
+	} 
 
 	a:active {
 		  color: yellow;
@@ -70,26 +70,28 @@
 
 	/* https://www.w3schools.com/css/css3_buttons.asp */
 
-	/* class=anybutton */		/* make the curser a pointer for the whole square*/
+	/* class='anybutton'; */		/* make the curser a pointer for the whole square*/
 	.anybutton{
-			border-radius: 4px;
-			cursor: pointer;
+	/* 		border-radius: 4px; */
+/* 			cursor: pointer; */
 	}
+
+
+.menu{
+	border-radius: 4px;
 	
-	/* double shadow on hover */
-	.anybutton:hover {
-				/* double shadow on hover */
-			/* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */
-				/* pink inset shadow */
-			box-shadow: 20px 20px 50px 10px pink inset;
-	}
-	
-	
-	
-	
+}
+
+
+
+
 	/* make the buttons rounded */
 	/* class=rounded*/
 	.rounded{
+	/* 		border-radius: 4px; */
+/* 			cursor: pointer; */
+
 		border-radius: 4px;
+		cursor: pointer;
 	}
 

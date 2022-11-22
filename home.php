@@ -5,7 +5,7 @@
 *	
 *			http://localhost:8080/webDB/Senior_Project/home.php
 *	
-*			C:\wamp64\www\webDB\Senior_Project
+*			C:/wamp64/www/webDB/Senior_Project
 *	
 *	has a welcome popup 
 *	has music + image
