@@ -16,17 +16,17 @@
 #this is a comment
 
 
-#ignore this file
+	#ignore this file
 helpLinks.txt
 
-#ignore all files in sql tables folder
+	#ignore all files in sql tables folder
 sql tables/
 
 
 #sql tables/gameinfo.sql
 
 
-#backlog.txt
+backlog.txt
 
 
 # nothing in old games folder

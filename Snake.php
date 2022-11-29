@@ -41,45 +41,83 @@
 
 
 
-/* //car driving
-$name = 'car driving';
-$location ='Games/Racing/CarDriving.html';
-*/
+
  
 /* // 2048
 $name = '2048';
 $location ='Games/2048/index.html';
 */
- 
-/* //DinoRun
+
+/* //DinoRun  (2)
 $name = 'DinoRun';
 $location ='Games/DinoRun2/index.html';
 */
 
 
-//GravityBall
+/* //Flappy Bird
+$name = 'Flappy Bird';
+$location ='Games/flappybird/index.html';
+ */
+ 
+ 
+ /* //GravityBall
 $name = 'GravityBall';
 $location ='Games/GravityBall/index.html';
-
+ */
 
 /* //racing
 $name = 'racing';
 $location ='Games/Racing/CarDriving.html';
  */
 
-/* //snake
+/* //Simon
+$name = 'Simon';
+$location ='Games/Simon/.index.html';
+ */
+
+ //snake
 $name = "snake";
 $location ='Games/Snake/index.html'; 
-*/
+
 
 /* // tetris
 $name = 'tetris';
 $location ='Games/Tetris/index.html';
  */
 
+/* // Whack-A-Mole
+$name = 'Whack-A-Mole';
+$location ='Games/whackamole/index.html';
+ */
+
+
+
+//2 player games
+
+
+/* // ConnectFour
+$name = 'ConnectFour';
+$location ='Games/ConnectFour/index.html';
+ */
+
+/* // pingpong
+$name = 'pingpong';
+$location ='Games/pingpong/index.html';
+ */
+
+/* // tictactoe
+$name = 'tictactoe';
+$location ='Games/tictactoe/index.html';
+ */
+
+
+
+
+
 
 
 //show snake game in its own window
+
 
 //works
 	//echo"<iframe src='Games/Racing/CarDriving.html' style='height:700px;width:700px;' title='Play car racing'></iframe>";
