@@ -44,9 +44,12 @@
 
 
 
- //snake
-$name = "snake";
-$location ='Games/Snake/index.html'; 
+ // Whack-A-Mole
+$name = 'ConnectFour';
+$location ='Games/2_Player/ConnectFour/index.html';
+ 
+
+
 
 
 
@@ -64,7 +67,7 @@ $location ='Games/Snake/index.html';
 
 
 // using variables above
-	echo"<iframe src= $location style='height:550px;width:450px;border:none;' title= $name ></iframe>";
+	echo"<iframe src= $location style='height:800px;width:650px;border:none;' title= $name ></iframe>";
 	
 	
 //	echo"<iframe src='Games/Gravity_Ball_Game/index.html' style='height:700px;width:700px;' title='the game snake'></iframe>";

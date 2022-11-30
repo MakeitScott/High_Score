@@ -75,6 +75,7 @@ document.addEventListener('keydown',function(e){
             }
             timesPlayed++;
             clearInterval(blocks);
+            alert("Game over. Your score was " + highScore)
             location.reload();
         }
 

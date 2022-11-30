@@ -43,12 +43,21 @@
 
 
 
- //DinoRun  (2)
-$name = 'DinoRun';
-$location ='Games/DinoRun2/index.html';
+
+ // Whack-A-Mole
+$name = 'pingpong';
+$location ='Games/2_Player/pingpong/index.html';
+ 
 
 
 
+
+
+
+
+
+
+//show snake game in its own window
 
 
 //works
@@ -58,7 +67,7 @@ $location ='Games/DinoRun2/index.html';
 
 
 // using variables above
-	echo"<iframe src= $location style='height:550px;width:950px;border:none;' title= $name ></iframe>";
+	echo"<iframe src= $location style='height:800px;width:650px;border:none;' title= $name ></iframe>";
 	
 	
 //	echo"<iframe src='Games/Gravity_Ball_Game/index.html' style='height:700px;width:700px;' title='the game snake'></iframe>";

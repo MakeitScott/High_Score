@@ -96,6 +96,9 @@ function isGameOver() {
         highScore = score;
       }
       timesPlayed++;
+
+      $.post('saveData.php', {highscore: highScore});
+
       ctx.fillStyle = "white";
       ctx.font = "50px Verdana";
 

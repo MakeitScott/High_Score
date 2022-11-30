@@ -214,15 +214,15 @@ window.onload = () => {
     // Move
     window.onkeydown = event => {
         switch (event.key) {
-            case "ArrowLeft":
+            case "a":
                 if (!tetromino.collides(i => ({ x: tetromino.x[i] - 1, y: tetromino.y[i] })))
                     tetromino.update(i => --tetromino.x[i]);
                 break;
-            case "ArrowRight":
+            case "d":
                 if (!tetromino.collides(i => ({ x: tetromino.x[i] + 1, y: tetromino.y[i] })))
                     tetromino.update(i => ++tetromino.x[i]);
                 break;
-            case "ArrowDown":
+            case "s":
                 delay = Tetromino.DELAY / Tetromino.DELAY_INCREASED;
                 break;
             case " ":
@@ -231,7 +231,7 @@ window.onload = () => {
         }
     }
     window.onkeyup = event => {
-        if (event.key === "ArrowDown")
+        if (event.key === "s")
             delay = Tetromino.DELAY;
     }
 
