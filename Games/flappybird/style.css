@@ -12,10 +12,6 @@
     position: relative;
 }
 
-body{
-    background-color: #e1f2de;
-}
-
 #pipe1{
     position: absolute;
     width: 50px;
