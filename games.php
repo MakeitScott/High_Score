@@ -25,8 +25,14 @@
 *	 also contains an image from the folder
 *	put image in each folder of game and image is $location + "/logo.img"
 *	
-***		
+***		NEED TO ADD PADDING TO TOP OF TABLES******
 */
+
+
+//echo"<br><table padding:'500pt'>
+//add padding to a class and  add this to both tables on this page
+
+
 
 
 
@@ -51,7 +57,7 @@
 echo"<table>
 <tr>	
     
-	<td><a href='flappybird.php'>	<img src = 'Games/icons/david_bird.jpg' 	style='width:200;height:200';>		</a></td>		
+	<td><a href='flappybird.php' >	<img src = 'Games/icons/david_bird.jpg'  alt='Play flappy bird' style='width:200;height:200;border-radius: 4px;'>		</a></td>		
 	
     <td> <a href='snake.php'>			<img src = 'Games/icons/david_snake.jpg' 	style='width:200;height:200';>		</a></td>
 	
@@ -83,12 +89,19 @@ echo"<table>
 </table>";
 
 // theres gotta be a better way to format this table header
+//<td colspan = '3'>
+//<td rowspan = '3'>
 
-echo"<table>
+
+echo"<br><table >
+
 <tr> 
-<td></td>
-	<td style='font-size:150%' align='center';>Two Player Games</td>
-<td></td>
+	<th height='100' align='center' colspan = '3';> 	</th>
+</tr>
+<tr> 
+
+	<th  align='center' colspan = '3';><h1>Two Player Games</h1></th>
+
 </tr>
 
 <tr> 

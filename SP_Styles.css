@@ -86,12 +86,23 @@
 
 
 	/* make the buttons rounded */
-	/* class=rounded*/
+	/* class='rounded'*/
 	.rounded{
 	/* 		border-radius: 4px; */
 /* 			cursor: pointer; */
 
 		border-radius: 4px;
 		cursor: pointer;
+	}
+
+
+
+
+	/* make the games rounded */
+	/* class='gamepics'*/
+.scott{
+	border-radius: 4px;
+	width:250;
+	height:250;
 	}
 
