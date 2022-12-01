@@ -71,7 +71,8 @@ echo"<br><a href='Games/DinoRun2/index.html'>		Play Dino Run 2</a>";
 
 //quote  		 
 //   ( "\" escape character)
-	echo"<p>\"Computers are good at following instructions, but not at reading your mind.\" –Donald Knuth";
+//	echo"<p>\"Computers are good at following instructions, but not at reading your mind.\" –Donald Knuth";
+	echo"<p>\"Computers are good at following instructions, but not David.\" –Donald Knuth";
 		  
 		  
 	/*	  //music from images file
